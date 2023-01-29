@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;400;700&family=Kaushan+Script&display=swap');
 
 :root {
+    --primary-colour: #4f200b;
     --text-shadow-large: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.7);
     --text-shadow-small: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.7);
 }
@@ -12,10 +13,11 @@ html {
 body {
     font-family: 'Jost', sans-serif;
     font-size: 1.6rem;
+    color: var(--primary-colour);
 }
 
 a {
-    color: #222;
+    color: var(--primary-colour);
 }
 
 /* Nav styles */
@@ -24,7 +26,7 @@ nav {
 }
 
 #logo {
-    width: 300px;
+    width: 25rem;
     margin: 0 auto;
 }
 
@@ -76,7 +78,7 @@ nav {
 /* Header image styles */
 
 header {
-    background-image: url('/media/burger.jpg');
+    background-image: url('/static/images/burger.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
