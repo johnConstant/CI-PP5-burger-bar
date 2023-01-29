@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;400;700&family=Kaushan+Script&display=swap');
+
+:root {
+    --text-shadow-large: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.7);
+    --text-shadow-small: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.7);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.6rem;
+}
+
+a {
+    color: #222;
+}
+
+/* Nav styles */
+nav {
+    background-color: transparent;
+}
+
+#logo {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.social-nav-icons ul {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    list-style: none;
+}
+
+.social-nav-icons a {
+    padding: 0 10px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+}
+.nav-item {
+    padding: 0 2rem;
+}
+.facebook {
+    color: #4267b2;
+}
+
+.twitter {
+    color: #00acee;
+}
+
+/* https://stackoverflow.com/questions/37751375/instagram-new-logo-css-background */
+/* https://css-tricks.com/snippets/css/gradient-text/ */
+
+.instagram {
+    background: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.youtube {
+    color: red;
+}
+
+/* Header image styles */
+
+header {
+    background-image: url('/media/burger.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #222;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    min-height: 75vh;
+    padding: 10rem;
+}
+
+header h1,
+header h2 {
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Kaushan Script', sans-serif;
+    font-size: 12rem;
+    margin-bottom: 0;
+    text-shadow: var(--text-shadow-large);
+}
+
+header h2 {
+    font-size: 2.4rem;
+    text-shadow: var(--text-shadow-small);
+}
+
+header h4 {
+    text-shadow: var(--text-shadow-small);
+}
+
+header h4:hover {
+    text-shadow: none;
+}
