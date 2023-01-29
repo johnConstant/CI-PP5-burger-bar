@@ -20,6 +20,10 @@ a {
     color: var(--primary-colour);
 }
 
+ul {
+    list-style-type: none;
+}
+
 /* Nav styles */
 nav {
     background-color: transparent;
@@ -116,3 +120,82 @@ header h4 {
 header h4:hover {
     text-shadow: none;
 }
+
+/* Footer */
+
+footer {
+    min-height: 15vh;
+    background-color: var(--primary-colour);
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    justify-items: center;
+}
+
+footer ul {
+    display: flex;
+    padding: 1.5rem;
+    list-style: none;
+}
+
+.site-links {
+    display: block;
+}
+
+footer a {
+    padding: 0 10px;
+    text-decoration: none;
+    font-size: 3.6rem;
+    color: white;
+}
+
+footer a:hover {
+    transition: 0.4s ease;
+}
+
+#facebook:hover {
+    color: #4267b2;
+}
+
+#twitter:hover {
+    color: #00acee;
+}
+
+/* https://stackoverflow.com/questions/37751375/instagram-new-logo-css-background */
+/* https://css-tricks.com/snippets/css/gradient-text/ */
+
+#instagram:hover {
+    background: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+#youtube:hover {
+    color: red;
+}
+
+.footer-links a {
+    font-size: 1.4rem;
+}
+
+/* MailChimp signup form */
+
+#mc_embed_signup{
+    clear:left; 
+    font: 'Jost', sans-serif;  
+    width:80%;
+}
+
+#mc-embedded-subscribe {
+    margin-right: 0;
+}
+                        
