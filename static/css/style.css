@@ -121,6 +121,21 @@ header h4:hover {
     text-shadow: none;
 }
 
+/* Menu page  */
+
+.menu-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.menu-price {
+    float: right;
+}
+
+.card {
+    border: none;
+}
+
 /* Footer */
 
 footer {

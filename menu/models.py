@@ -33,9 +33,6 @@ class Menu_Item(models.Model):
     class Meta:
         verbose_name_plural = 'Menu Items'
 
-    category = models.ForeignKey(
-        'Menu_Category', null=True, blank=True, on_delete=models.SET_NULL
-        )
     name = models.CharField(max_length=256, unique=True)
     slug = models.SlugField(max_length=256, unique=True, null=True)
     description = models.TextField()
@@ -45,6 +42,10 @@ class Menu_Item(models.Model):
         choices=ALLERGENS,
         max_length=100,
         default='none'
+        )
+    category = models.ForeignKey(
+        'Menu_Category', null=True, blank=True, related_name="items",
+        on_delete=models.SET_NULL
         )
 
     def __str__(self):
