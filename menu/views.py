@@ -35,22 +35,30 @@ def MenuList(request):
                     sortkey = f'-{sortkey}'
             menu_items = menu_items.order_by(sortkey)
 
-    if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            menu_items = menu_items.filter(category__name__in=categories)
+            categories = Menu_Category.objects.filter(name__in=categories)
+
         if 'search' in request.GET:
             query = request.GET['search']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!"
+                    )
                 return redirect(reverse('menu'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = (
+                Q(name__icontains=query) | Q(description__icontains=query)
+                )
             menu_items = menu_items.filter(queries)
 
     context = {
         "menu_items": menu_items,
         "search": query,
-        "current_category": category,
+        "current_category": categories,
     }
-    
+
     return render(request, 'menu/menu.html', context)
 
 
