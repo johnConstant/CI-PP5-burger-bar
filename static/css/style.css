@@ -79,6 +79,40 @@ nav {
     color: red;
 }
 
+/* Navigation */
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile > * {
+    margin: 1rem;
+}
+
+.profile a {
+    padding: 1rem;
+}
+
+.profile a:hover {
+    color: white;
+    font-weight: 400;
+}
+
+.user-info {
+    display: flex;
+}
+
+.user-info i {
+    padding-right: 1.6rem;
+}
+
+.user-info p {
+    margin: 0;
+}
+
 /* Header image styles */
 
 header {

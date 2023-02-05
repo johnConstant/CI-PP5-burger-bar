@@ -1,24 +1,37 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
+from django.db.models import Q
 from django.views import generic, View
 
 from .models import Menu_Item, Menu_Category, Special_Offer
 
 
 # Create your views here.
-class MenuList(generic.ListView):
-    """
-    A class view for getting a specific category
-    """
-    def get(self, request, *args, **kwargs):
-        items = Menu_Item.objects.all()
-        categories = Menu_Category.objects.all()
 
-        context = {
-            'items': items,
-            'categories': categories
-        }
+def MenuList(request):
+    """
+    A class view for getting all menu items
+    """
+    menu_items = Menu_Item.objects.all()
+    # paginate_by = 15
+    query = None
 
-        return render(request, 'menu/menu.html', context)
+    if request.GET:
+        if 'search' in request.GET:
+            query = request.GET['search']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('products'))
+
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            menu_items = menu_items.filter(queries)
+
+    context = {
+        "menu_items": menu_items,
+        "search": query
+    }
+    
+    return render(request, 'menu/menu.html', context)
 
 
 class MenuItemDetail(View):
