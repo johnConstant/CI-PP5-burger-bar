@@ -15,7 +15,7 @@
   <div class="card mb-3">
     <div class="row no-gutters">
       <div class="col-md-4 col-lg-2">
-        {% if "placeholder" in article.featured_image.url %}
+        {% if "placeholder" in item.featured_image.url %}
           <img class="menu-image float-right" src="https://envato-shoebox-0.imgix.net/5877/b8eb-fffe-471b-9146-6f70fa2cf235/Pizza-3.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=4df0f4a84d7eb8c41ae9dc69880e640cs">
         {% else %}
           <img class="menu-image float-right" src="{{ item.featured_image.url }}" alt="Why not try one of our delicious {{ item.name }}s" />

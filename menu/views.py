@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.views import generic, View
+from django.db.models.functions import Lower
 
 from .models import Menu_Item, Menu_Category, Special_Offer
 
@@ -15,20 +16,39 @@ def MenuList(request):
     menu_items = Menu_Item.objects.all()
     # paginate_by = 15
     query = None
+    category = None
+    sort = None
+    direction = None
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                menu_items = menu_items.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            menu_items = menu_items.order_by(sortkey)
 
     if request.GET:
         if 'search' in request.GET:
             query = request.GET['search']
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
-                return redirect(reverse('products'))
+                return redirect(reverse('menu'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             menu_items = menu_items.filter(queries)
 
     context = {
         "menu_items": menu_items,
-        "search": query
+        "search": query,
+        "current_category": category,
     }
     
     return render(request, 'menu/menu.html', context)
