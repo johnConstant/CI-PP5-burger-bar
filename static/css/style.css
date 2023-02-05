@@ -18,10 +18,15 @@ body {
 
 a {
     color: var(--primary-colour);
+    text-decoration: none;
 }
 
 ul {
     list-style-type: none;
+}
+
+button {
+    font-size: 1.6rem;
 }
 
 /* Nav styles */
@@ -30,7 +35,7 @@ nav {
 }
 
 #logo {
-    width: 25rem;
+    width: 18rem;
     margin: 0 auto;
 }
 
@@ -79,8 +84,6 @@ nav {
     color: red;
 }
 
-/* Navigation */
-
 .profile {
     display: flex;
     flex-direction: row;
@@ -111,6 +114,10 @@ nav {
 
 .user-info p {
     margin: 0;
+}
+
+.form-control {
+    font-size: 1.6rem;
 }
 
 /* Header image styles */
@@ -168,6 +175,11 @@ header h4:hover {
 
 .card {
     border: none;
+}
+
+.card-title {
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 /* Footer */
