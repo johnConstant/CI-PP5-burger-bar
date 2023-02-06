@@ -25,7 +25,8 @@ ul {
     list-style-type: none;
 }
 
-button {
+button,
+.btn {
     font-size: 1.6rem;
 }
 
