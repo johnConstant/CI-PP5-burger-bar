@@ -183,6 +183,25 @@ header h4:hover {
     text-transform: uppercase;
 }
 
+/* Shopping Cart */
+
+.decrement-qty,
+.increment-qty {
+    background-color: var(--primary-colour);
+    color: white;
+    font-weight: 700;
+}
+
+.decrement-qty {
+    border-bottom-left-radius: .5rem;
+    border-top-left-radius: .5rem;
+}
+
+.increment-qty {
+    border-bottom-right-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
 /* Footer */
 
 footer {

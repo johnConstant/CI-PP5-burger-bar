@@ -43,7 +43,7 @@
                                     <input class="form-control qty_input" type="number"
                                         name="quantity" value="1" min="1" max="99"
                                         data-item_id="{{ item.id }}"
-                                        id="id_qty_{{ product.id }}">
+                                        id="id_qty_{{ item.id }}">
                                     <div class="input-group-append">
                                         <button class="increment-qty btn btn-black rounded-0"
                                             data-item_id="{{ item.id }}" id="increment-qty_{{ item.id }}">
@@ -55,7 +55,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col{% if s %}-12 mt-2{% endif %}">
                             <a href="{% url 'menu' %}" class="btn btn-outline-black rounded-0 mt-5">
                                 <span class="icon">
@@ -72,4 +71,9 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'menu/includes/quantity_update_script.html' %}
 {% endblock %}
