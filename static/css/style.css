@@ -35,6 +35,30 @@ nav {
     background-color: transparent;
 }
 
+.navbar {
+    background-color: var(--primary-colour);
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #ccc;
+}
+
+.dropdown-menu {
+    color: white;
+}
+
+.dropdown-item {
+    font-size: 1.6rem;
+    color: var(--primary-colour);
+}
+
 #logo {
     width: 18rem;
     margin: 0 auto;
@@ -56,33 +80,9 @@ nav {
 .nav-item {
     padding: 0 2rem;
 }
-.facebook {
-    color: #4267b2;
-}
 
-.twitter {
-    color: #00acee;
-}
-
-/* https://stackoverflow.com/questions/37751375/instagram-new-logo-css-background */
-/* https://css-tricks.com/snippets/css/gradient-text/ */
-
-.instagram {
-    background: radial-gradient(
-        circle at 30% 107%,
-        #fdf497 0%,
-        #fdf497 5%,
-        #fd5949 45%,
-        #d6249f 60%,
-        #285aeb 90%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.youtube {
-    color: red;
+.nav-price {
+    font-weight: normal;
 }
 
 .profile {
@@ -94,10 +94,6 @@ nav {
 
 .profile > * {
     margin: 1rem;
-}
-
-.profile a {
-    padding: 1rem;
 }
 
 .profile a:hover {
@@ -202,6 +198,11 @@ header h4:hover {
     border-top-right-radius: .5rem;
 }
 
+.update-link,
+.remove-item {
+    cursor: pointer
+}
+
 /* Footer */
 
 footer {
@@ -273,7 +274,7 @@ footer a:hover {
 #mc_embed_signup{
     clear:left; 
     font: 'Jost', sans-serif;  
-    width:80%;
+    /* width:80%; */
 }
 
 #mc-embedded-subscribe {
