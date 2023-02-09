@@ -13,7 +13,7 @@ def MenuList(request):
     """
     A class view for getting all menu items
     """
-    menu_items = Menu_Item.objects.all()
+    menu_items = Menu_Item.objects.all().order_by('category')
     # paginate_by = 15
     query = None
     category = None
