@@ -207,6 +207,10 @@ header h4:hover {
 
 footer {
     min-height: 15vh;
+    background-image: url('/static/images/Brown-leather-texture.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: var(--primary-colour);
     color: white;
     font-weight: bold;

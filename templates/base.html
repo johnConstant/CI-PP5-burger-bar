@@ -8,6 +8,12 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="{% static 'images/favicon.ico' %}"
+        >
         <!-- SEO meta tags -->
         <meta
             name="description"
@@ -104,6 +110,7 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{% url 'menu' %}?category=Burgers">Burgers</a></li>
                         <li><a class="dropdown-item" href="{% url 'menu' %}?category=Sides">Sides</a></li>
+                        <li><a class="dropdown-item" href="{% url 'menu' %}?category=Sauces">Sauces</a></li>
                         <li><a class="dropdown-item" href="{% url 'menu' %}?category=Drinks">Drinks</a></li>
                         <li><a class="dropdown-item" href="{% url 'menu' %}?category=Desserts">Desserts</a></li>
                         <li><hr class="dropdown-divider"></li>
