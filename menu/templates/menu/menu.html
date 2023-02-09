@@ -11,7 +11,21 @@
 
 {% block content %}
 <section id="menu" class="container">
-  <div class="row mt-1 mb-2 px-4">
+  <div class="row no-gutters">
+    <div class="col-12">
+      {% if current_category is not None %}
+        {% for category in current_category %}
+          <div class="category-info my-5 p-5">
+            <h3 class="category-title">{{ category.name }}</h3>
+            <p class="category-description">
+              {{ category.description }}
+            </p>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+  <div class="row mt-1 mb-4 px-4">
     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
         <div class="sort-select-wrapper w-50">
           <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border w-100 p-2">
@@ -26,24 +40,10 @@
     <div class="col-12 col-md-6 order-md-first">
         <p class="text-muted mt-3 text-md-left">
             {% if search or current_categories or current_sorting != 'None_None' %}
-                <span class="small"><a href="{% url 'menu' %}">Menu Home</a> | </span>
+                <span class="small"><a href="{% url 'menu' %}">Menu </a> | </span>
             {% endif %}
-            {{ menu_items|length }} Products{% if search %} found for <strong>"{{ search }}"</strong>{% endif %}
+            {{ menu_items|length }} Items{% if search %} found for <strong>"{{ search }}"</strong>{% endif %}
         </p>
-    </div>
-  </div>
-  <div class="row no-gutters">
-    <div class="col-12">
-      {% if current_category is not None %}
-        {% for category in current_category %}
-          <div class="category-info my-5 p-5">
-            <h3 class="category-title">{{ category.name }}</h3>
-            <p class="category-description">
-              {{ category.description }}
-            </p>
-          </div>
-        {% endfor %}
-      {% endif %}
     </div>
   </div>
   {% for item in menu_items %}
