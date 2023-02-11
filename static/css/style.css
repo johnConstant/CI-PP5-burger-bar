@@ -161,10 +161,12 @@ header h4:hover {
 
 /* Menu page  */
 
+.page-title,
 .category-title {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 2.4rem;
+    padding: 1.5rem 0;
 }
 
 .menu-image {
