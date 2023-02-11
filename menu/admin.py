@@ -16,6 +16,7 @@ class MenuItemAdmin(SummernoteModelAdmin):
 
 @admin.register(Menu_Category)
 class MenuCategoryAdmin(SummernoteModelAdmin):
+    prepopulated_fields = ({'slug': ('name',)})
     list_display = ('name', 'description')
     search_fields = ['name',]
     summernote_fields = ('description')
@@ -23,6 +24,7 @@ class MenuCategoryAdmin(SummernoteModelAdmin):
 
 @admin.register(Special_Offer)
 class SpecialOfferAdmin(SummernoteModelAdmin):
+    prepopulated_fields = ({'slug': ('name',)})
     list_display = ('name', 'description', 'price')
     search_fields = ['name',]
     summernote_fields = ('description')
