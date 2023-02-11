@@ -211,6 +211,17 @@ header h4:hover {
     cursor: pointer
 }
 
+/* FAQs */
+.accordion-button {
+    font-size: 1.6rem;
+}
+
+.accordion-button:not(.collapsed) {
+    color: white;
+    background-color: var(--primary-colour);
+}
+
+
 /* Footer */
 
 footer {
