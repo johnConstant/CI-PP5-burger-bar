@@ -10,4 +10,4 @@ class FAQAdmin(SummernoteModelAdmin):
 
     list_display = ('question', 'answer')
     search_fields = ['question', 'answer']
-    summernote_fields = ('question', 'answers')
+    summernote_fields = ('question', 'answer')

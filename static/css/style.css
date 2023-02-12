@@ -212,6 +212,10 @@ header h4:hover {
 }
 
 /* FAQs */
+.accordion {
+    color: var(--primary-colour);
+}
+
 .accordion-button {
     font-size: 1.6rem;
 }
