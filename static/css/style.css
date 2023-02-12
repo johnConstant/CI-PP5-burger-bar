@@ -243,8 +243,17 @@ footer ul {
     list-style: none;
 }
 
+.footer-link {
+    font-size: 1.6rem;
+    padding: 0;
+}
+
 .site-links {
     display: block;
+}
+
+.site-links li {
+    margin-bottom: 1rem;
 }
 
 footer a {
