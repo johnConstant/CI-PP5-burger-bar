@@ -17,4 +17,4 @@ class LocationAdmin(admin.ModelAdmin):
     list_display = ('name', 'street_address1', 'phone_number')
 
 
-admin.site.register(Order, OrderAdmin)
+admin.site.register(Location, Hours)

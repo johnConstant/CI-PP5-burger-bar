@@ -1,14 +1,27 @@
 from django.db import models
 
 DAYS = [
-   (Monday, mon),
-   (Tuesday, tue),
-   (Wednesday, wed),
-   (Thursday, thu),
-   (Friday, fri),
-   (Saturday, sat),
-   (Sunday, sun),
+   ('Monday', 'mon'),
+   ('Tuesday', 'tue'),
+   ('Wednesday', 'wed'),
+   ('Thursday', 'thu'),
+   ('Friday', 'fri'),
+   ('Saturday', 'sat'),
+   ('Sunday', 'sun'),
 ]
+
+
+class Hours(models.Model):
+    day = models.CharField(
+        choices=DAYS,
+        max_length=9,
+        default='none'
+        )
+    open = models.TimeField()
+    close = models.TimeField()
+
+    def __str__(self):
+        return self.day
 
 
 class Location(models.Model):
@@ -31,16 +44,3 @@ class Location(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class Hours(models.Model):
-    day = models.CharField(
-        choices=DAYS,
-        max_length=3,
-        default='none'
-        )
-    open = models.TimeField()
-    close = models.TimeField()
-
-    def __str__(self):
-        return self.day
