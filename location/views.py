@@ -20,8 +20,10 @@ class LocationDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Location.objects.all()
         location = get_object_or_404(queryset, slug=slug)
-
+        days = Location.objects.filter(opening_hours=location.id)
+        print(days)
         context = {
             'location': location,
+            'days': days
         }
         return render(request, 'locations/location_detail.html', context)
