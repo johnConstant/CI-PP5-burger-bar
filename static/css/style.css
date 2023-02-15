@@ -167,6 +167,7 @@ header h4:hover {
     font-weight: 700;
     font-size: 2.4rem;
     padding: 1.5rem 0;
+    margin: 1.5rem 0;
 }
 
 .menu-image {
@@ -211,6 +212,33 @@ header h4:hover {
     cursor: pointer
 }
 
+/* Locations */
+
+.location-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-button {
+    font-size: 3.6rem;
+    font-weight: 700;
+    padding: 1.5rem 3rem;
+    border: 1px solid var(--primary-colour);
+    margin: 2rem 0;
+    display: block;
+}
+
+.location-button:hover {
+    background-color: var(--primary-colour);
+    color: white;
+}
+
+#map {
+    height: 36rem;
+}
+
 /* FAQs */
 .accordion {
     color: var(--primary-colour);
@@ -230,10 +258,10 @@ header h4:hover {
 
 footer {
     min-height: 15vh;
-    background-image: url('/static/images/Brown-leather-texture.webp');
+    /* background-image: url('/static/images/Brown-leather-texture.webp');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     background-color: var(--primary-colour);
     color: white;
     font-weight: bold;
