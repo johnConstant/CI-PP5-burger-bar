@@ -5,10 +5,16 @@ from django.db.models import Sum
 from django.conf import settings
 
 from menu.models import Menu_Item
+from location.models import Location
 
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
+    # order_type = models.CharField(max_length=32, null=False, blank=False)
+    # order_location = models.ForeignKey(
+    #     Location, null=False, blank=False, on_delete=models.PROTECT,
+    #     related_name='order_location'
+    #     )
     full_name = models.CharField(max_length=100, null=False, blank=False)
     email = models.EmailField(max_length=256, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
