@@ -31,12 +31,12 @@ button,
     font-size: 1.6rem;
 }
 
-.btn-black {
+.btn-brown {
     background: var(--primary-colour);
     color: white;
 }
 
-.btn-outline-black {
+.btn-outline-brown {
     background: white;
     color: var(--primary-colour) !important; /* use important to override link colors for <a> elements */
     border: 1px solid var(--primary-colour);
@@ -184,6 +184,61 @@ header h4 {
 header h4:hover {
     text-shadow: none;
 }
+
+/* Login/Logout */
+/* Form Controls */
+
+input,
+textarea,
+select {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2.4rem;
+    border-radius: 0.3rem;
+    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 3px solid transparent;
+    width: 80%;
+    display: block;
+    transition: all 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    border-bottom: 3px solid var(--primary-colour);
+}
+
+input {
+    margin-top: 1rem;
+}
+
+input::file-selector-button {
+    color: white;
+    background-color: var(--primary-colour);
+    letter-spacing: 1px;
+    padding: 0.5em 1em;
+    border: 0;
+    border-radius: 3px;
+}
+
+.submit-btn {
+    color:white;
+}
+
+.signup {
+    background-color: rgb(248,249,250);
+    min-height: 55vh;
+}
+
+.signup input {
+    width: 100%;
+}
+
 
 /* Menu page  */
 
