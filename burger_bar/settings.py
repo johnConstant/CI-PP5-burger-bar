@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'faqs',
     'location',
     'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
