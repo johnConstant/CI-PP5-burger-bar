@@ -2,6 +2,7 @@
 
 :root {
     --primary-colour: #4f200b;
+    --primary-colour-light: #ab5229;
     --text-shadow-large: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.7);
     --text-shadow-small: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.7);
 }
@@ -28,6 +29,31 @@ ul {
 button,
 .btn {
     font-size: 1.6rem;
+}
+
+.btn-black {
+    background: var(--primary-colour);
+    color: white;
+}
+
+.btn-outline-black {
+    background: white;
+    color: var(--primary-colour) !important; /* use important to override link colors for <a> elements */
+    border: 1px solid var(--primary-colour);
+}
+
+.btn-outline-brown:hover,
+.btn-outline-brown:active,
+.btn-outline-brown:focus {
+    background: var(--primary-colour);
+    color: white !important;
+}
+
+.btn-brown:hover,
+.btn-brown:active,
+.btn-brown:focus {
+    background: var(--primary-colour);
+    color: white;
 }
 
 /* Nav styles */
