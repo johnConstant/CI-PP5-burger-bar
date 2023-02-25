@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 
-# Create your views here.
+import env
+
 from .forms import OrderForm
 
 
@@ -15,6 +16,8 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
+        'stripe_public_key': os.environ.get('STRIPE_SECRET_KEY'),
+        'client_secret': os.environ.get('STRIPE_CLIENT_SECRET'),
     }
 
     return render(request, template, context)
