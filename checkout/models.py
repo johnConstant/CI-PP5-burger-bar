@@ -8,13 +8,19 @@ from menu.models import Menu_Item
 from location.models import Location
 
 
+ORDER_TYPE = (('delivery', 'Delivery'), ('collection', 'Collection'))
+
+
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
-    # order_type = models.CharField(max_length=32, null=False, blank=False)
-    # order_location = models.ForeignKey(
-    #     Location, null=False, blank=False, on_delete=models.PROTECT,
-    #     related_name='order_location'
-    #     )
+    order_type = models.CharField(
+        choices=ORDER_TYPE, max_length=32, null=False, blank=False,
+        default=None
+        )
+    order_location = models.ForeignKey(
+        Location, null=False, blank=False, on_delete=models.PROTECT,
+        related_name='order_location', default=None
+        )
     full_name = models.CharField(max_length=100, null=False, blank=False)
     email = models.EmailField(max_length=256, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
