@@ -296,6 +296,11 @@ input::file-selector-button {
 
 /* Checkout */
 
+#payment-form input::placeholder,
+#payment-form select::placeholder {
+    color: #ccc;
+}
+
 .form-check-input {
     padding: 0;
 }
@@ -324,7 +329,7 @@ input::file-selector-button {
 }
 
 .stripe-style-input::placeholder {
-    color: var(--primary-colour-light);
+    color: #ccc;
 }
 
 .fieldset-label {
