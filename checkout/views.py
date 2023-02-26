@@ -38,14 +38,14 @@ def checkout(request):
                     menu_item = Menu_Item.objects.get(id=item_id)
                     order_line_item = OrderLineItem(
                         order=order,
-                        menu_item=menu_item,
+                        item=menu_item,
                         quantity=item_data,
                     )
                     order_line_item.save()
-                    
-                except Product.DoesNotExist:
+
+                except Menu_Item.DoesNotExist:
                     messages.error(request, (
-                        "One of the items in your cart wasn't found in our database. "
+                        "One of the items in your cart wasn't found in our database."
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -85,6 +85,28 @@ def checkout(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+    }
+
+    return render(request, template, context)
+
+
+def checkout_success(request, order_number):
+    """
+    Handle successful checkouts
+    """
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    print(order)
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
+
+    if 'bag' in request.session:
+        del request.session['bag']
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
     }
 
     return render(request, template, context)
