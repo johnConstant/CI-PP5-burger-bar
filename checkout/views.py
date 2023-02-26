@@ -45,7 +45,8 @@ def checkout(request):
 
                 except Menu_Item.DoesNotExist:
                     messages.error(request, (
-                        "One of the items in your cart wasn't found in our database."
+                        "One of the items in your cart wasn't found in our \
+                        database."
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -96,13 +97,12 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    print(order)
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
 
-    if 'bag' in request.session:
-        del request.session['bag']
+    if 'cart' in request.session:
+        del request.session['cart']
 
     template = 'checkout/checkout_success.html'
     context = {
