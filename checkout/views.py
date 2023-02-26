@@ -1,8 +1,10 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
+from .models import Order, OrderLineItem
+from menu.models import Menu_Item
 from cart.context import cart_contents
 
 import stripe
@@ -12,10 +14,57 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-    cart = request.session.get('cart', {})
-    if not cart:
-        messages.error(request, "You haven't ordered anything yet! ")
-        return redirect(reverse('menu'))
+    if request.method == 'POST':
+        cart = request.session.get('cart', {})
+
+        form_data = {
+            'order_type': request.POST['order_type'],
+            'order_location': request.POST['order_location'],
+            'full_name': request.POST['full_name'],
+            'email': request.POST['email'],
+            'phone_number': request.POST['phone_number'],
+            'street_address1': request.POST['street_address1'],
+            'street_address2': request.POST['street_address2'],
+            'town_or_city': request.POST['town_or_city'],
+            'county': request.POST['county'],
+            'postcode': request.POST['postcode'],
+            'country': request.POST['country'],
+        }
+        order_form = OrderForm(form_data)
+        if order_form.is_valid():
+            order = order_form.save()
+            for item_id, item_data in cart.items():
+                try:
+                    menu_item = Menu_Item.objects.get(id=item_id)
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        menu_item=menu_item,
+                        quantity=item_data,
+                    )
+                    order_line_item.save()
+                    
+                except Product.DoesNotExist:
+                    messages.error(request, (
+                        "One of the items in your cart wasn't found in our database. "
+                        "Please call us for assistance!")
+                    )
+                    order.delete()
+                    return redirect(reverse('view_cart'))
+
+            request.session['save_info'] = 'save-info' in request.POST
+            return redirect(
+                reverse('checkout_success', args=[order.order_number])
+                )
+        else:
+            messages.error(request, 'There was an error with your form. \
+                Please double check your information.')
+    else:
+        cart = request.session.get('cart', {})
+        if not cart:
+            messages.error(
+                request, "There's nothing in your cart at the moment"
+                )
+            return redirect(reverse('products'))
 
     current_cart = cart_contents(request)
     total = current_cart['grand_total']
