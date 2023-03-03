@@ -6,6 +6,7 @@ from django.conf import settings
 
 from menu.models import Menu_Item
 from location.models import Location
+from profiles.models import UserProfile
 
 from django_countries.fields import CountryField
 
@@ -19,6 +20,9 @@ class Order(models.Model):
         choices=ORDER_TYPE, max_length=32, null=False, blank=False,
         default=None
         )
+    user_profile = models.ForeignKey(
+        UserProfile, on_delete=models.SET_NULL,
+        null=True, blank=True, related_name='orders')
     order_location = models.ForeignKey(
         Location, null=False, blank=False, on_delete=models.PROTECT,
         related_name='order_location', default=None
