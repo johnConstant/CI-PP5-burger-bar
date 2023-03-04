@@ -52,7 +52,10 @@ class StripeWH_Handler:
         username = intent.metadata.username
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
+            orderlocation = get_object_or_404(Location, id=int(
+                shipping_details.carrier))
             if save_info:
+                profile.default_location = orderlocation
                 profile.default_phone_number = shipping_details.phone
                 profile.default_country = shipping_details.address.country
                 profile.default_postcode = shipping_details.address.postal_code
@@ -67,7 +70,6 @@ class StripeWH_Handler:
         while attempt <= 5:
             try:
                 order = Order.objects.get(
-                    user_profile=profile,
                     full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
                     phone_number__iexact=shipping_details.phone,
@@ -99,6 +101,7 @@ class StripeWH_Handler:
                 order = Order.objects.create(
                     order_location=orderlocation,
                     order_type=shipping_details.tracking_number,
+                    user_profile=profile,
                     full_name=shipping_details.name,
                     email=billing_details.email,
                     phone_number=shipping_details.phone,
