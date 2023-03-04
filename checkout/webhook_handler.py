@@ -32,7 +32,6 @@ class StripeWH_Handler:
         pid = intent.id
         cart = intent.metadata.cart
         save_info = intent.metadata.save_info
-        print(event)
         # Get the Charge object
         stripe_charge = stripe.Charge.retrieve(
             intent.latest_charge
@@ -40,9 +39,6 @@ class StripeWH_Handler:
 
         billing_details = stripe_charge.billing_details   # updated
         shipping_details = intent.shipping
-
-        print("SHIPPING_DETAILS")
-        print(shipping_details)
 
         grand_total = round(stripe_charge.amount / 100, 2)  # updated
 
@@ -97,9 +93,8 @@ class StripeWH_Handler:
                 status=200)
         else:
             order = None
-            orderlocation = get_object_or_404(Location, id=int(shipping_details.carrier))
-            # order_location = orderlocation
-            print(shipping_details.carrier)
+            orderlocation = get_object_or_404(Location, id=int(
+                shipping_details.carrier))
             try:
                 order = Order.objects.create(
                     order_location=orderlocation,
