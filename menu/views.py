@@ -3,8 +3,10 @@ from django.contrib import messages
 from django.db.models import Q
 from django.views import generic, View
 from django.db.models.functions import Lower
+from django.template.defaultfilters import slugify
 
 from .models import Menu_Item, Menu_Category, Special_Offer
+from .forms import MenuItemForm
 
 
 # Create your views here.
@@ -77,3 +79,34 @@ class MenuItemDetail(View):
             'item': item,
         }
         return render(request, 'menu/menu_detail.html', context)
+
+
+class MenuItemAdd(View):
+    """
+    A class view for adding a menu item
+    """
+    def get(self, request, *args, **kwargs):
+        form = MenuItemForm()
+        context = {
+            'form': form
+        }
+        return render(request, 'menu/add_menu_item.html', context)
+
+    def post(self, request, *args, **kwargs):
+        try:
+            form = MenuItemForm(request.POST, request.FILES)
+            form.instance.slug = slugify(request.POST['name'])
+            if form.is_valid():
+                form.save()
+                messages.success(request, "Your item has been added.")
+                return redirect('menu')
+            else:
+                form = MenuItemForm(request.POST, request.FILES)
+                context = {
+                    'form': form
+                }
+                return render(request, 'add_menu_item.html', context)
+        except Menu_Item.DoesNotExist:
+            messages.error(request,
+                           'An error occurred when adding your item.')
+            return redirect('menu')
