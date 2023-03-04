@@ -74,6 +74,8 @@ form.addEventListener('submit', function(ev) {
                 }
             },
             shipping: {
+                carrier:$.trim(form.order_location.value),
+                tracking_number:$.trim(form.order_type.value),
                 name: $.trim(form.full_name.value),
                 phone: $.trim(form.phone_number.value),
                 address: {
