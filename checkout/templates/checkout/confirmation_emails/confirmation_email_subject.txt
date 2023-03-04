@@ -1,0 +1,1 @@
+Thanks for your order at Burger Bar - {{ order.order_location}} - {{ order.order_number }}
