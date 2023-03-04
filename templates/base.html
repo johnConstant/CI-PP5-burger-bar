@@ -68,9 +68,11 @@
             </a>
             <div class="profile">
                 {% if user.is_authenticated %}
-                    <div class="user-info">
-                        <i class="fa-solid fa-user"></i>
-                        <p>Hi, {{ user.username }}</p>
+                    <div>
+                        <a href="{% url 'profile' %}" class="user-info">
+                            <i class="fa-solid fa-user"></i>
+                            <p>Hi, {{ user.username }}</p>
+                        </a>
                     </div>
                     <a
                         href="{% url 'account_logout' %}"
