@@ -7,4 +7,6 @@ urlpatterns = [
     path(
          'add/', views.FaqAdd.as_view(), name='add_faq'
     ),
+    path('edit/<int:id>', views.FaqUpdate.as_view(),
+         name='edit_faq'),
 ]
