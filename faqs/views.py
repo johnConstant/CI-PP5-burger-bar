@@ -100,3 +100,27 @@ class FaqUpdate(View):
             messages.error(request,
                            'An error occurred when updating your FAQ.')
             return redirect('faqs')
+
+
+class FaqDelete(View):
+    """
+    A class view for deleting an existing faq
+    """
+    @method_decorator(login_required)
+    def post(self, request, id, **kwargs):
+        """
+        Delete a selected faq
+        """
+        if not request.user.is_superuser:
+            messages.error(request, 'Sorry, only store owners can do that.')
+            return redirect(reverse('home'))
+
+        try:
+            faq = FAQ.objects.get(id=id)
+            faq.delete()
+            messages.success(request, "Your faq has been deleted.")
+            return redirect('faqs')
+        except FAQ.DoesNotExist:
+            messages.error(request,
+                           'An error occurred when deleting your faq.')
+            return redirect('faqs')
