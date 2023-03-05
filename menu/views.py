@@ -137,7 +137,7 @@ class MenuItemUpdate(View):
                 messages.success(request, "Your item has been updated.")
                 return redirect('menu')
             else:
-                messages.error(request, "Please check that the information you \
+                messages.error(request, "Please check that the information you\
                                 entered is valid.")
                 context = {
                     'form': form
@@ -146,4 +146,23 @@ class MenuItemUpdate(View):
         except Menu_Item.DoesNotExist:
             messages.error(request,
                            'An error occurred when updating your item.')
+            return redirect('menu')
+
+
+class MenuItemDelete(View):
+    """
+    A class view for deleting an existing menu item
+    """
+    def post(self, request, id, **kwargs):
+        """
+        Delete a selected menu item
+        """
+        try:
+            item = Menu_Item.objects.get(id=id)
+            item.delete()
+            messages.success(request, "Your item has been deleted.")
+            return redirect('menu')
+        except Menu_Item.DoesNotExist:
+            messages.error(request,
+                           'An error occurred when deleting your item.')
             return redirect('menu')
