@@ -101,12 +101,49 @@ class MenuItemAdd(View):
                 messages.success(request, "Your item has been added.")
                 return redirect('menu')
             else:
+                messages.error(request,
+                               'Failed to add your item. Please ensure the form\
+                                 is valid.')
                 form = MenuItemForm(request.POST, request.FILES)
                 context = {
                     'form': form
                 }
-                return render(request, 'add_menu_item.html', context)
+                return render(request, 'menu/add_menu_item.html', context)
         except Menu_Item.DoesNotExist:
             messages.error(request,
                            'An error occurred when adding your item.')
+            return redirect('menu')
+
+
+class MenuItemUpdate(View):
+    """
+    A class view for updating an existing menu item
+    """
+    def get(self, request, slug, *args, **kwargs):
+        item = get_object_or_404(Menu_Item, slug=slug)
+        form = MenuItemForm(instance=item)
+        context = {
+            'form': form
+        }
+        return render(request, 'menu/edit_menu_item.html', context)
+
+    def post(self, request, slug, *args, **kwargs):
+        try:
+            item = get_object_or_404(Menu_Item, slug=slug)
+            form = MenuItemForm(request.POST, request.FILES, instance=item)
+            form.instance.slug = slugify(request.POST['name'])
+            if form.is_valid():
+                form.save()
+                messages.success(request, "Your item has been updated.")
+                return redirect('menu')
+            else:
+                messages.error(request, "Please check that the information you \
+                                entered is valid.")
+                context = {
+                    'form': form
+                }
+                return render(request, 'menu/edit_menu_item.html', context)
+        except Menu_Item.DoesNotExist:
+            messages.error(request,
+                           'An error occurred when updating your item.')
             return redirect('menu')
