@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.views import generic, View
 from django.db.models.functions import Lower
@@ -81,11 +82,16 @@ class MenuItemDetail(View):
         return render(request, 'menu/menu_detail.html', context)
 
 
+@login_required
 class MenuItemAdd(View):
     """
     A class view for adding a menu item
     """
     def get(self, request, *args, **kwargs):
+        if not request.user.is_superuser:
+            messages.error(request, 'Sorry, only store owners can do that.')
+            return redirect(reverse('home'))
+
         form = MenuItemForm()
         context = {
             'form': form
@@ -93,6 +99,9 @@ class MenuItemAdd(View):
         return render(request, 'menu/add_menu_item.html', context)
 
     def post(self, request, *args, **kwargs):
+        if not request.user.is_superuser:
+            messages.error(request, 'Sorry, only store owners can do that.')
+            return redirect(reverse('home'))
         try:
             form = MenuItemForm(request.POST, request.FILES)
             form.instance.slug = slugify(request.POST['name'])
@@ -115,11 +124,16 @@ class MenuItemAdd(View):
             return redirect('menu')
 
 
+@login_required
 class MenuItemUpdate(View):
     """
     A class view for updating an existing menu item
     """
     def get(self, request, slug, *args, **kwargs):
+        if not request.user.is_superuser:
+            messages.error(request, 'Sorry, only store owners can do that.')
+            return redirect(reverse('home'))
+
         item = get_object_or_404(Menu_Item, slug=slug)
         form = MenuItemForm(instance=item)
         context = {
@@ -128,6 +142,10 @@ class MenuItemUpdate(View):
         return render(request, 'menu/edit_menu_item.html', context)
 
     def post(self, request, slug, *args, **kwargs):
+        if not request.user.is_superuser:
+            messages.error(request, 'Sorry, only store owners can do that.')
+            return redirect(reverse('home'))
+
         try:
             item = get_object_or_404(Menu_Item, slug=slug)
             form = MenuItemForm(request.POST, request.FILES, instance=item)
@@ -149,6 +167,7 @@ class MenuItemUpdate(View):
             return redirect('menu')
 
 
+@login_required
 class MenuItemDelete(View):
     """
     A class view for deleting an existing menu item
@@ -157,6 +176,10 @@ class MenuItemDelete(View):
         """
         Delete a selected menu item
         """
+        if not request.user.is_superuser:
+            messages.error(request, 'Sorry, only store owners can do that.')
+            return redirect(reverse('home'))
+
         try:
             item = Menu_Item.objects.get(id=id)
             item.delete()
