@@ -9,4 +9,9 @@ urlpatterns = [
     ),
     path('edit/<int:id>', views.FaqUpdate.as_view(),
          name='edit_faq'),
+    path(
+        'delete/<int:id>',
+        views.FaqDelete.as_view(),
+        name='delete_faq'
+        ),
 ]
