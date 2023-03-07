@@ -7,7 +7,7 @@
             class="col-sm-8 col-md-6 offset-sm-2 offset-md-3 p-5"
         >
         <h2 class="category-title mt-5">Add FAQ</h2>
-        <form method="post" enctype="multipart/form-data">
+        <form method="post">
             {% csrf_token %}
             {{ form | crispy }} 
             <div>

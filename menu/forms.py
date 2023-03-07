@@ -1,5 +1,6 @@
 from django import forms
-from .models import Menu_Item
+from .widgets import CustomClearableFileInput
+from .models import Menu_Item, Menu_Category
 
 
 class MenuItemForm(forms.ModelForm):
@@ -9,3 +10,10 @@ class MenuItemForm(forms.ModelForm):
     class Meta:
         model = Menu_Item
         exclude = ['slug',]
+
+    featured_image = forms.ImageField(
+        label='Image', required=False, widget=CustomClearableFileInput)
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        categories = Menu_Category.objects.all()
