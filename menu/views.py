@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+# from django.utils.decorators import method_decorator
 from django.db.models import Q
 from django.views import generic, View
 from django.db.models.functions import Lower
@@ -82,8 +83,7 @@ class MenuItemDetail(View):
         return render(request, 'menu/menu_detail.html', context)
 
 
-@login_required
-class MenuItemAdd(View):
+class MenuItemAdd(LoginRequiredMixin, View):
     """
     A class view for adding a menu item
     """
@@ -98,6 +98,7 @@ class MenuItemAdd(View):
         }
         return render(request, 'menu/add_menu_item.html', context)
 
+    # @method_decorator(login_required)
     def post(self, request, *args, **kwargs):
         if not request.user.is_superuser:
             messages.error(request, 'Sorry, only store owners can do that.')
@@ -124,11 +125,11 @@ class MenuItemAdd(View):
             return redirect('menu')
 
 
-@login_required
-class MenuItemUpdate(View):
+class MenuItemUpdate(LoginRequiredMixin, View):
     """
     A class view for updating an existing menu item
     """
+    # @method_decorator(login_required)
     def get(self, request, slug, *args, **kwargs):
         if not request.user.is_superuser:
             messages.error(request, 'Sorry, only store owners can do that.')
@@ -141,6 +142,7 @@ class MenuItemUpdate(View):
         }
         return render(request, 'menu/edit_menu_item.html', context)
 
+    # @method_decorator(login_required)
     def post(self, request, slug, *args, **kwargs):
         if not request.user.is_superuser:
             messages.error(request, 'Sorry, only store owners can do that.')
@@ -167,11 +169,11 @@ class MenuItemUpdate(View):
             return redirect('menu')
 
 
-@login_required
-class MenuItemDelete(View):
+class MenuItemDelete(LoginRequiredMixin, View):
     """
     A class view for deleting an existing menu item
     """
+    # @method_decorator(login_required)
     def post(self, request, id, **kwargs):
         """
         Delete a selected menu item
