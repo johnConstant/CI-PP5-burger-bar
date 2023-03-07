@@ -29,7 +29,7 @@ ALLAUTH_TEMPLATES_DIRS = os.path.join(BASE_DIR, 'templates', 'allauth')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["ci-pp5-burger-bar.herokuapp.com", "localhost"]
 
