@@ -8,6 +8,7 @@ ALLERGENS = [
     ('Eggs', 'eggs'),
     ('Fish', 'fish')
 ]
+STATUS = ((0, 'Draft'), (1, 'Published'))
 
 
 # Create your models here.
@@ -47,6 +48,9 @@ class Menu_Item(models.Model):
         'Menu_Category', null=True, blank=True, related_name="items",
         on_delete=models.SET_NULL
         )
+    status = models.IntegerField(choices=STATUS, default=0)
+    featured = models.BooleanField(default=False)
+
 
     def __str__(self):
         return self.name
