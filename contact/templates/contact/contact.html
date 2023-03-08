@@ -2,14 +2,18 @@
 
 {% block content %}
  <!-- Contact us form -->
- <section id="contact-us" class="container">          
-        <form method="post" class="my-5">
-            <h1>Contact Us</h1>
-            <p>Let us know how we're doing. Reach out and tell us what you're thinking.
-            </p>      
-            {% csrf_token %}  
-            {{ contact_form | crispy }}      
-            <button type="submit">Get in touch</button>
-        </form>
+ <section id="contact-us" class="container"> 
+    <div class="row">
+        <div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+            <form method="post" class="my-5">
+                <h1 class="category-title">Contact Us</h1>
+                <p>Let us know how we're doing. Reach out and tell us what you're thinking.
+                </p>      
+                {% csrf_token %}  
+                {{ contact_form | crispy }}      
+                <button class="btn btn-outline-brown" type="submit">Get in touch</button>
+            </form>
+        </div>
+    </div>         
 </section>
 {% endblock %}
