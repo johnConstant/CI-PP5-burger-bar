@@ -51,7 +51,6 @@ class Menu_Item(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     featured = models.BooleanField(default=False)
 
-
     def __str__(self):
         return self.name
 

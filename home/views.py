@@ -1,9 +1,14 @@
 from django.shortcuts import render
 
-# Create your views here.
+from menu.models import Menu_Item
 
 
 def index(request):
     """ A view to return the index page """
+    special = Menu_Item.objects.filter(featured=True)[:1]
 
-    return render(request, 'home/index.html')
+    context = {
+        'specials': special
+    }
+
+    return render(request, 'home/index.html', context)
