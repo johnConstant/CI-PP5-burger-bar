@@ -52,7 +52,7 @@ button,
 .btn-brown:hover,
 .btn-brown:active,
 .btn-brown:focus {
-    background: var(--primary-colour);
+    background: var(--primary-colour-light);
     color: white;
 }
 
@@ -78,8 +78,9 @@ nav {
     color: white;
 }
 
-.nav-link:hover {
-    color: #ccc;
+.nav-link:hover,
+.nav-link:active {
+    color: var(--primary-colour-light);
 }
 
 .dropdown-menu {
@@ -259,6 +260,10 @@ input::file-selector-button {
 .signup input[type='checkbox'] {
     box-shadow: none;
     width: auto;
+}
+
+.qty_input {
+    margin-top: 0;
 }
 
 /* Blurb */

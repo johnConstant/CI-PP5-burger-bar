@@ -7,7 +7,7 @@
         <div class="col-12">
             {% if user.is_superuser %}
                 <div class="btn-container d-flex justify-content-end align-items-">
-                    <a class="nav-link btn btn-warning p-4" href="edit/{{ item.slug }}">Edit <i class="fa fa-pencil"></i></a>
+                    <a class="nav-link btn btn-warning p-4 mr-3" href="edit/{{ item.slug }}">Edit <i class="fa fa-pencil"></i></a>
                     <!-- Delete confirmation modal -->
                     <a href="#deleteModal" data-bs-toggle="modal" data-bs-target="#deleteModal" class="delete-btn nav-link btn btn-danger p-4">
                         Delete <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
@@ -91,13 +91,13 @@
                             </div>
                         </div>
                         <div class="col{% if s %}-12 mt-2{% endif %}">
-                            <a href="{% url 'menu' %}" class="btn btn-outline-black rounded-0 mt-5">
+                            <input type="submit" class="btn btn-brown p-3 text-uppercase mt-5" value="Add to Cart">
+                            <a href="{% url 'menu' %}" class="btn btn-outline-brown p-3">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
