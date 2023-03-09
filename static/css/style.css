@@ -266,6 +266,11 @@ input::file-selector-button {
     margin-top: 0;
 }
 
+.search-btn {
+    height: 66%;
+    margin-top: 1rem;
+}
+
 /* Blurb */
 
 .blurb {
@@ -361,6 +366,11 @@ input::file-selector-button {
     margin: 1.5rem 0;
 }
 
+.pagination .page-item .page-link {
+    color: var(--primary-colour);
+    font-size: 1.6rem;
+}
+
 .menu-image {
     max-width: 100%;
     height: auto;
@@ -377,6 +387,12 @@ input::file-selector-button {
 .card-title {
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.allergen-icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 1rem 0;
 }
 
 /* Shopping Cart */

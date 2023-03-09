@@ -98,7 +98,7 @@
         >
           <a
           href="{% url 'menu_detail' item.slug %}"
-          class="btn btn-outline-danger"
+          class="btn btn-outline-brown"
             >Add to order</a
           >
         </p>
@@ -106,6 +106,43 @@
     </div>
   </div>
   {% endfor %}
+  {% if menu_items.has_other_pages %}
+    <nav>
+      <ul class="pagination justify-content-center">
+        {% if menu_items.has_previous %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ menu_items.previous_page_number }}" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+        {% else %}
+          <li class="page-item disabled">
+              <span class="page-link" aria-hidden="true">&laquo;</span>
+          </li>
+        {% endif %}
+
+        {% for p in menu_items.paginator.page_range %}
+          {% if menu_items.number == p %}
+            <li class="page-item"><a class="page-link" style="color: #ab5229" href="#">{{ p }}</a></li>
+          {% else %}
+            <li class="page-item"><a class="page-link" href="?page={{ p }}">{{ p }}</a></li>
+          {% endif %}
+        {% endfor %}
+
+        {% if menu_items.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ menu_items.next_page_number }}" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        {% else %}
+          <li class="page-item disabled">
+            <span class="page-link" aria-hidden="true">&raquo;</span>
+          </li>
+        {% endif %}
+    </ul>
+    </nav>
+  {% endif %}
 </section>
 {% endblock %}
 

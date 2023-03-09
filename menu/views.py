@@ -6,6 +6,7 @@ from django.db.models import Q
 from django.views import generic, View
 from django.db.models.functions import Lower
 from django.template.defaultfilters import slugify
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .models import Menu_Item, Menu_Category
 from .forms import MenuItemForm
@@ -59,8 +60,18 @@ def MenuList(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    page = request.GET.get('page', 1)
+    paginator = Paginator(menu_items, 10)
+
+    try:
+        items = paginator.page(page)
+    except PageNotAnInteger:
+        items = paginator.page(1)
+    except EmptyPage:
+        items = paginator.page(paginator.num_pages)
+
     context = {
-        "menu_items": menu_items,
+        "menu_items": items,
         "search": query,
         "current_category": category,
         "current_sorting": current_sorting
