@@ -125,12 +125,16 @@ nav {
     align-items: center;
 }
 
+.profile i {
+    line-height: 1.6;
+}
+
 .profile > * {
     margin: 1rem;
 }
 
 .profile a:hover {
-    color: white;
+    color: var(--primary-colour-light);
     font-weight: 400;
 }
 

@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container my-5">
     <div class="row">
         <div class="col">
             <h4 class="page-title">
@@ -38,7 +38,7 @@
                             <tr>
                                 <td class="p-3 w-25">
                                     {% if "placeholder" in item.menu_item.featured_image.url %}
-                                        <img class="menu-image float-right" src="https://res.cloudinary.com/djgf3vydo/image/upload/v1678384777/placeholder_image_u9hnqg.webp">
+                                        <img class="menu-image float-right" src="https://res.cloudinary.com/djgf3vydo/image/upload/v1678384777/placeholder_image_u9hnqg.webp"  alt="Why not try one of our delicious {{ item.name }}s">
                                     {% else %}
                                         <img class="menu-image float-right" src="{{ item.menu_item.featured_image.url }}" alt="Why not try one of our delicious {{ item.name }}s" />
                                     {% endif %}
@@ -88,10 +88,10 @@
                                 </td>
                             </tr>
                         {% endfor %}
-                        <tr>
+                        <tr class="d-flex justify-content-end">
                             <td colspan="5" class="pt-5 text-right">
-                                <h6><strong>Bag Total: &euro;{{ total|floatformat:2 }}</strong></h6>
-                                <h6>Delivery: &euro;{{ delivery|floatformat:2 }}</h6>
+                                <h4><strong>Bag Total: &euro;{{ total|floatformat:2 }}</strong></h4>
+                                <h4>Delivery: &euro;{{ delivery|floatformat:2 }}</h4>
                                 <h4 class="mt-4"><strong>Grand Total: &euro;{{ grand_total|floatformat:2 }}</strong></h4>
                                 {% if free_delivery_delta > 0 %}
                                     <p class="mb-1 text-danger">
@@ -102,13 +102,13 @@
                         </tr>
                         <tr>
                             <td colspan="5" class="text-right">
-                                <a href="{% url 'menu' %}" class="btn btn-outline-black btn-lg">
+                                <a href="{% url 'menu' %}" class="btn btn-outline-brown btn-lg p-3">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <a href="{% url 'checkout' %}" class="btn btn-black btn-lg">
+                                <a href="{% url 'checkout' %}" class="btn btn-brown btn-lg p-3">
                                     <span class="text-uppercase">Secure Checkout</span>
                                     <span class="icon">
                                         <i class="fas fa-lock"></i>
@@ -119,8 +119,8 @@
                     </table>
                 </div>
             {% else %}
-                <p class="lead mb-5">Your cart is empty.</p>
-                <a href="{% url 'menu' %}" class="btn btn-outline-black btn-lg">
+                <p class="mb-5">Your cart is empty.</p>
+                <a href="{% url 'menu' %}" class="btn btn-outline-brown btn-lg p-3">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
