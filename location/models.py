@@ -21,7 +21,7 @@ class Hours(models.Model):
     close = models.TimeField()
 
     def __str__(self):
-        return self.day
+        return f'{self.day} from {self.open} - {self.close}'
 
 
 class Location(models.Model):
