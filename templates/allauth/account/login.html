@@ -40,6 +40,7 @@
         <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
         <button class="btn-brown btn-large m-4" type="submit">{% trans "Sign In" %}</button>
       </form>
+      <a class="btn btn-light p-3 m-3 d-block btn-lg" href="{% provider_login_url 'google' %}"> <i class="fa-brands fa-google google"></i> Log in with Google</a>  
     </div>
   </div>
 </section>

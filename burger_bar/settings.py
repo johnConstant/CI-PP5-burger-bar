@@ -29,7 +29,7 @@ ALLAUTH_TEMPLATES_DIRS = os.path.join(BASE_DIR, 'templates', 'allauth')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["ci-pp5-burger-bar.herokuapp.com", "localhost"]
 
@@ -47,8 +47,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     # 'allauth.socialaccount.providers.facebook',
-    # 'allauth.socialaccount.providers.github',
-    # 'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.google',
     # 'allauth.socialaccount.providers.instagram',
     'cloudinary_storage',
     'django.contrib.staticfiles',
@@ -110,6 +109,22 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        },
+        'OAUTH_PKCE_ENABLED': True,
+    }
+}
 
 # log emails to console for development
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
