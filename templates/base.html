@@ -61,7 +61,50 @@
     <div class="container">
         <div class="d-flex justify-content-between mt-3">
             <div class="phone-number d-none d-md-flex align-items-center">
-                <p>Call us: 021-4545454</p>
+                {% if request.user.userprofile.default_location %}
+                    <p>Call us: {{ request.user.userprofile.default_location.phone_number }}</p>
+                {% else %}
+                    <div class="d-none d-md-flex align-items-center social-nav-icons">
+                        <ul>
+                            <li>
+                                <a
+                                    href="https://www.facebook.com"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="Visit our Facebook page (opens in a new tab)"
+                                    ><i class="fa-brands fa-facebook facebook"></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.twitter.com"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="Visit our Twitter page (opens in a new tab)"
+                                    ><i class="fa-brands fa-twitter twitter"></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.instagram.com"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="Visit our Instagram page (opens in a new tab)"
+                                    ><i class="fa-brands fa-instagram instagram"></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.youtube.com"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="Visit our YouTube page (opens in a new tab)"
+                                    ><i class="fa-brands fa-youtube youtube"></i
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+                {% endif %}
             </div>
             <a class="navbar-brand" href="{% url 'home' %}">
                 <img id="logo" src="{% static 'images/burger_logo.png' %}" alt="Burger Bar - Savour every bite"/>
@@ -142,11 +185,13 @@
         </nav>
     </div>
     {% if messages %}
-        <div class="message-container">
+        <div class="message-container m-0">
             {% for message in messages %}
                 <div class="alert alert-{{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-                    {{ message | safe }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <p class="container">
+                        {{ message | safe }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </p>
                 </div>
             {% endfor %}
         </div>
