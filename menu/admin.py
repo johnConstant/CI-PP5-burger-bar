@@ -24,6 +24,6 @@ class MenuCategoryAdmin(SummernoteModelAdmin):
 
 @admin.register(Allergen)
 class AllergensAdmin(SummernoteModelAdmin):
-    list_display = ('name', 'description', 'icon')
+    list_display = ('name', 'description')
     search_fields = ['name',]
     summernote_fields = ('description')
