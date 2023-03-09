@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Menu_Category, Menu_Item, Special_Offer
+from .models import Menu_Category, Menu_Item, Allergen
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -22,9 +22,8 @@ class MenuCategoryAdmin(SummernoteModelAdmin):
     summernote_fields = ('description')
 
 
-@admin.register(Special_Offer)
-class SpecialOfferAdmin(SummernoteModelAdmin):
-    prepopulated_fields = ({'slug': ('name',)})
-    list_display = ('name', 'description', 'price')
+@admin.register(Allergen)
+class AllergensAdmin(SummernoteModelAdmin):
+    list_display = ('name', 'description', 'icon')
     search_fields = ['name',]
     summernote_fields = ('description')

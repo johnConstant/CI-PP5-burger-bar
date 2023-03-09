@@ -7,7 +7,7 @@ from django.views import generic, View
 from django.db.models.functions import Lower
 from django.template.defaultfilters import slugify
 
-from .models import Menu_Item, Menu_Category, Special_Offer
+from .models import Menu_Item, Menu_Category
 from .forms import MenuItemForm
 
 
@@ -112,8 +112,8 @@ class MenuItemAdd(LoginRequiredMixin, View):
                 return redirect('menu')
             else:
                 messages.error(request,
-                               'Failed to add your item. Please ensure the form\
-                                 is valid.')
+                               'Failed to add your item. Please ensure the\
+                                 form is valid.')
                 form = MenuItemForm(request.POST, request.FILES)
                 context = {
                     'form': form
