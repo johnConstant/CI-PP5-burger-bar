@@ -256,6 +256,11 @@ input::file-selector-button {
     width: 100%;
 }
 
+.signup input[type='checkbox'] {
+    box-shadow: none;
+    width: auto;
+}
+
 /* Blurb */
 
 .blurb {
