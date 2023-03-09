@@ -17,8 +17,10 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="submit-btn" type="submit">{% trans "Sign Up" %} &raquo;</button>
+        <button class="submit-btn btn btn-brown btn-large" type="submit">{% trans "Sign Up" %} &raquo;</button>
       </form>
+      <a class="btn btn-primary p-3 m-3 d-block btn-lg" href="{% provider_login_url 'facebook' method='oauth2' %}"><i class="fa-brands fa-facebook"></i> Sign up with Facebook</a>
+      <a class="btn btn-light p-3 m-3 d-block btn-lg" href="{% provider_login_url 'google' %}"> <i class="fa-brands fa-google google"></i> Sign Up with Google</a>
     </div>
   </div>
 </section>
