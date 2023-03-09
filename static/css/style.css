@@ -165,6 +165,10 @@ header {
     padding: 10rem;
 }
 
+#about {
+    background-image: url('/static/images/about_header.jpg');
+}
+
 header h1,
 header h2 {
     color: white;

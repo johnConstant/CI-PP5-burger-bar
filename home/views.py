@@ -14,6 +14,18 @@ def index(request):
     return render(request, 'home/index.html', context)
 
 
+def about(request):
+    """ A view to return the about us page """
+
+    return render(request, 'home/about_us.html')
+
+
+def sitemap(request):
+    """ A view to return the sitemap us page """
+
+    return render(request, 'home/sitemap.html')
+
+
 def privacy_policy(request):
     """ A view to return the privacy policy page """
 
