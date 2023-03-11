@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/accounts/signup/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/accounts/login/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/about/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?category=Burgers</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?category=Sides</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?category=Sauces</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?category=Drinks</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?category=Desserts</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?category=Special%20Offers</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/locations/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/contact/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/cart/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/meal-deal</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/faqs/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/privacy-policy/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/sitemap</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/accounts/password/reset/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/chicken-burger</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/classic-cheeseburger</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/el-diablo</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/bacon-cheeseburger</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/bbq-burger</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/breakfast-burger</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/side-salad</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/garlic-bread</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/onion-rings</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/hand-cut-chips</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?page=2</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?page=3</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/sweet-chilli-sauce</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/garlic-mayo</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/spicy-chilli-sauce</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/honey-mustard</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/homemade-bbq-sauce</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/330ml-can-of-coca-cola</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/blueberry-cheesecake</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/carrot-cake</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/chocolate-cake</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/chocolate-brownie</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/locations/patrick-street/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/locations/maccurtain-street/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/locations/wilton/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?page=1</loc>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>

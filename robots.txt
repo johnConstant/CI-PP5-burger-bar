@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /profile/
+Sitemap: https://ci-pp5-burger-bar.herokuapp.com/sitemap.xml
