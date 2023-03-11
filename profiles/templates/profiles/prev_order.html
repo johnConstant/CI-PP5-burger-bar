@@ -15,14 +15,8 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Thank You</h2>
+                <h2 class="logo-font mb-4">Your Order</h2>
                 <hr>
-                <p>Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
-                {% if order.order_type == 'collection' %}
-                <p>Your order will be ready for collection at {{ order.order_location }} in 15 minutes.</p>
-                {% else %}
-                <p>Your order will be delivered to {{ order.street_address1 }} in approximately 45 minutes.</p>
-                {% endif %}
             </div>
         </div>
 
@@ -50,6 +44,24 @@
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.order_date }}</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 font-weight-bold">Order Type</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ order.order_type.capitalize }}</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 font-weight-bold">Order Location</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ order.order_location }}</p>
                         </div>
                     </div>
 
