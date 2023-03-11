@@ -1,5 +1,5 @@
 from django import forms
-from .models import Order
+from .models import Order, Comment
 
 
 class OrderForm(forms.ModelForm):
@@ -39,3 +39,9 @@ class OrderForm(forms.ModelForm):
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].label = False
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('body', )

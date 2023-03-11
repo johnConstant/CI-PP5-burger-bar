@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Order, OrderLineItem
+from .models import Order, OrderLineItem, Comment
 
 
 class OrderLineItemAdminInline(admin.TabularInline):
@@ -9,7 +9,7 @@ class OrderLineItemAdminInline(admin.TabularInline):
 
 class OrderAdmin(admin.ModelAdmin):
     inlines = (OrderLineItemAdminInline,)
-
+    search_fields = ('order_number', 'full_name',)
     readonly_fields = ('order_number', 'order_date',
                        'delivery_cost', 'order_total',
                        'grand_total',)
@@ -29,3 +29,15 @@ class OrderAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Order, OrderAdmin)
+
+
+@admin.register(Comment)
+class CommentsAdmin(admin.ModelAdmin):
+
+    list_filter = ('approved', 'created_date')
+    list_display = ('name', 'body', 'order', 'created_date')
+    search_fields = ['name', 'email', 'body']
+    actions = ['approve_comments']
+
+    def approve_comments(self, request, queryset):
+        queryset.update(approved=True)

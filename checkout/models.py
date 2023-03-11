@@ -108,3 +108,20 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'{self.order.order_number} on {self.order.order_date}'
+
+
+class Comment(models.Model):
+    order = models.ForeignKey(
+        Order, on_delete=models.CASCADE, related_name='comments'
+        )
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created_date = models.DateField(auto_now_add=True)
+    approved = models.BooleanField(default=0)
+
+    class Meta:
+        ordering = ['created_date']
+
+    def __str__(self):
+        return f"Feedback {self.body} from {self.name}"
