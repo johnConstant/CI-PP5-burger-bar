@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 # from django.utils.decorators import method_decorator
 from django.db.models import Q
-from django.views import generic, View
+from django.views import View
 from django.db.models.functions import Lower
 from django.template.defaultfilters import slugify
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger

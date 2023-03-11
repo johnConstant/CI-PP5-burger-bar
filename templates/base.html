@@ -55,7 +55,7 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Burger Bar - {% block extra_title %}{% endblock %}</title>
+    <title>Burger Bar {% block extra_title %} - {% endblock %}</title>
   </head>
   <body>
     <div class="container">
@@ -119,7 +119,7 @@
                     </div>
                     <a
                         href="{% url 'account_logout' %}"
-                        class="btn btn-outline-success signout ml-5"
+                        class="btn btn-outline-brown signout ml-5"
                         type="submit"
                     >
                         Sign out

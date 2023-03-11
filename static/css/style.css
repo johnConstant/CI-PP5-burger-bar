@@ -138,7 +138,7 @@ nav {
     margin: 1rem;
 }
 
-.profile a:hover:not(.login) {
+.user-info:hover {
     color: var(--primary-colour-light);
     font-weight: 400;
 }

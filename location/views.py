@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.views import generic, View
 from django.contrib import messages
 from django.utils.decorators import method_decorator
@@ -64,8 +64,8 @@ class LocationAdd(View):
                 return redirect('locations')
             else:
                 messages.error(request,
-                               'Failed to add your location. Please ensure the form\
-                                 is valid.')
+                               'Failed to add your location. Please ensure the\
+                                 form is valid.')
                 form = LocationForm(request.POST, request.FILES)
                 context = {
                     'form': form
@@ -135,7 +135,7 @@ class LocationDelete(View):
             return redirect(reverse('home'))
 
         try:
-            location = Menu_Item.objects.get(id=id)
+            location = Location.objects.get(id=id)
             location.delete()
             messages.success(request, "Your location has been deleted.")
             return redirect('locations')
