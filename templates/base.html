@@ -125,10 +125,10 @@
                         Sign out
                     </a>
                 {% else %}
-                    <a class="btn btn-outline-warning" href="{% url 'account_signup' %}"
+                    <a class="btn btn-outline-brown" href="{% url 'account_signup' %}"
                         >Register</a
                     >
-                    <a class="btn btn-outline-success" href="{% url 'account_login' %}"
+                    <a class="btn btn-brown login" href="{% url 'account_login' %}"
                         >Log in</a
                     >
                 {% endif %}
@@ -157,6 +157,7 @@
                             <li><a class="dropdown-item" href="{% url 'menu' %}?category=Sauces">Sauces</a></li>
                             <li><a class="dropdown-item" href="{% url 'menu' %}?category=Drinks">Drinks</a></li>
                             <li><a class="dropdown-item" href="{% url 'menu' %}?category=Desserts">Desserts</a></li>
+                            <li><a class="dropdown-item" href="{% url 'menu' %}?category=Special%20Offers">Special Offers</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{% url 'menu' %}">All Categories</a></li>
                         </ul>
