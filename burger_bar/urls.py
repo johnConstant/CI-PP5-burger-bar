@@ -18,4 +18,7 @@ urlpatterns = [
     path('', include('home.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+handler400 = 'burger_bar.views.handler400'
+handler403 = 'burger_bar.views.handler403'
 handler404 = 'burger_bar.views.handler404'
+handler500 = 'burger_bar.views.handler500'
