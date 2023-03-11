@@ -46,7 +46,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-md-4 offset-md-2">
+        <div class="col-12 col-md-4 offset-md-2 mt-3">
             <div class="location-details d-flex flex-column">
                 <h3>{{ location.name }}</h3>
                 <p>{{ location.phone_number }}</p>
@@ -65,8 +65,9 @@
                 {% endif %}
             </div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 mt-3">
             <div class="location-opening-hours">
+                <h3>Opening Hours:</h3>
                 {% for day in days %}
                     <p class="day">
                         {{ day.day }}: {{ day.open }} - {{ day.close }}
