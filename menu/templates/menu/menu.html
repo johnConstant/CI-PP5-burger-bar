@@ -68,9 +68,9 @@
     <div class="row no-gutters">
       <div class="col-md-4 col-lg-2">
         {% if "placeholder" in item.featured_image.url %}
-          <img class="menu-image float-right" src="https://res.cloudinary.com/djgf3vydo/image/upload/v1678384777/placeholder_image_u9hnqg.webp" alt="Why not try one of our delicious {{ item.name }}s">
+          <img class="menu-image" src="https://res.cloudinary.com/djgf3vydo/image/upload/v1678384777/placeholder_image_u9hnqg.webp" width="100%" height="auto" alt="Why not try one of our delicious {{ item.name }}s">
         {% else %}
-          <img class="menu-image float-right" src="{{ item.featured_image.url }}" alt="Why not try one of our delicious {{ item.name }}s" />
+          <img class="menu-image" src="{{ item.featured_image.url }}" width="100%" height="auto" alt="Why not try one of our delicious {{ item.name }}s" />
         {% endif %}
       </div>
       <div class="col-md-8">
