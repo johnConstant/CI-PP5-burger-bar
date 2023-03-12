@@ -281,6 +281,16 @@ input::file-selector-button {
     margin-top: 1rem;
 }
 
+.hidden-label {
+    border-width: 0 !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important; 
+}
+
 /* Blurb */
 
 .blurb {
