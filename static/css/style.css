@@ -676,7 +676,9 @@ footer a:hover {
     color: white;
 }
 
-
+#mc_embed_signup .asterisk {
+    color: white;
+}
 
 /* Media Queries */
 
@@ -695,6 +697,11 @@ footer a:hover {
     .category-title {
         text-align: center;
     }
+}
 
+@media (max-width: 640px) {
+    header{
+        padding: 0; 
+    }
 }
                         
