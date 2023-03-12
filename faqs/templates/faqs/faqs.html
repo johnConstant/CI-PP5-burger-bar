@@ -39,7 +39,7 @@
                     <i class="fa fa-pencil"></i>
                 </a>
                 <!-- Delete confirmation modal -->
-                <a href="#deleteModal" data-bs-toggle="modal" data-bs-target="#deleteModal" class="delete-btn nav-link btn btn-danger p-3">
+                <a href="#deleteModal-{{ faq.id }}" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ faq.id }}" class="delete-btn nav-link btn btn-danger p-3">
                     <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
                     <span class="sr-only">Delete item</span> 
                 </a>
@@ -50,7 +50,7 @@
             </div>
         </div>
          <!-- Modal for deleting existing plan -->
-         <div class="modal fade py-5" id="deleteModal" tabindex="-1" aria-hidden="true">
+         <div class="modal fade py-5" id="deleteModal-{{ faq.id }}" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <form method="post" action="{% url 'delete_faq' faq.id %}">
