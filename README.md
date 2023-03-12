@@ -94,34 +94,51 @@ Whether you're in a rush or looking for a quick bite to eat, Burger Bar has you 
 
 ## User Stories
 
-### Users
-1. As a site user, I can create an account to interact with recipes
-2. As a site user, I can view all recipes in one place
-3. As a site user, I can view the most popular recipes on the home page
-4. As a site user, I can view the featured recipes on the home page
-5. As a site user, I can log in to comment on recipes and articles
-6. As a site user, I can log in to like/unlike recipes
-8. As a site user, I can log in using social media accounts/gmail to make registration easier
-9. As a site user, I can view recipes organised by category to make finding particular recipes
-10. As a site user, I can view comments on an individual recipe or article so that I can read the conversation
-11. As a site user, I want to be aware of logged in status
-12. As a site user, I want contact form/email subscription prefilled with account info
-13. As a site user, I want to be able to search through the recipes
+### Site User
+1. As a site user, I want a clean and easy to use menu for intuitive navigation through the site.
+2. As a site user, I want to be able to connect with social media to stay up-to-date with new offers.
+3. As a site user, I want to be able to connect by email to stay up-to-date with new offers.
+4. As a site user, I want to see the most important company information on initially arriving at the website.
+5. As a site user, I want to be able to find out more about the company to help make an informed decision about who I purchase from.
+6. As a site user, I want to be able to view the restaurant’s menu to see what items are on offer.
+7. As a site user, I want to be able to sort menu products by price, category and alphabetically to easily find what I’m looking for.
+8. As a site user, I want to be able to search the menu for items I want.
+9. As a site user, I want to be able to place an order for collection or delivery.
+10. As a site user, I want to be able to choose the amount of an item I want to add to my order.
+11. As a site user I want to be able to see which items are suitable for me based on my food allergies.
+12. As a site user, I want to be able to review my order before checking out to ensure it is correct.
+13. As a site user, I want to be able to update my order before checking out.
+14. As a site user, I want to check out through a secure checkout form.
+15. As a site user, I want my profile details prepopulated in checkout form when signed into the website.
+16. As a site user, I want to be able to view my previous orders.
+17. As a site user, I want to be able to leave feedback about my order.
+18. As a site user, I want to be able to view information about the various restaurant locations.
+19. As a site user, I want to be able to view the restaurant’s FAQs to answer some common questions I may have.
+20. As a site user, I want to be able to contact the restaurant with any questions or comments I may have.
+21. As a site user, I want to be able to create an account and save my personal information.
+22. As a site user, I want to be able to create an account using my social media for quick setup.
+23. As a site user, I want to be able to update my account information.
 
-### Site admin
-13. As a site admin, I can create, read, update and delete my recipes and articles to manage site content
-14. As a site admin, I can approve or disapprove comments so that I can filter out objectionable comments
-15. As a site admin, I can create, read, update and delete categories to organise site content
-16. As a site admin, I can choose which recipes are featured on the home page
-17. As a site admin, I want to be able to log into admin dashboard to edit recipes/categories/comments
-18. As a site admin, I want edit forms prefilled with relevant info
+### Site Administrator
+24. As a site administrator, I want to be able to add, edit and delete menu items and menu categories
+25. As a site administrator, I want to be able to add, edit and delete new locations when new restaurants open.
+26. As a site administrator, I want to be able to add, edit and delete a new FAQ
+27. As a site administrator, I want to view the users registered to the website.
+28. As a site administrator, I want to be able to view comments and messages left by users on the Contact Us form
+29. As a site administrator, I want to be able to to add new allergens
+30. As a site administrator, I want to be able to to add new menu categories
+31. As a site administrator, I want to be able to to view and edit past orders
 
-### Site Owner
-19. As a site owner, I want to increase my social media presence
-20. As a site owner, I want visitors to share recipes on social media to increase visitors
-21. As a site owner, I want data entry to be validated on sign-up page
-22. As a site owner, I want the user to come to a 404 error page instead of having to use the browser back button if they enter a URL that does not exist
-23. As a site owner, I want user to be able to contact me and provide their feedback
+### Store Owner
+32. As a store owner, I want to increase the number of social media fans I have.
+33. As a store owner, I want to increase the number of people I can email about new products and special offers to increase foot traffic in the restaurants.
+34. As a store owner, I want the highest possible ranking in the Google search results (SEO best practices).
+35. As a store owner, I want to be able to add new locations to the site as they open increasing sales.
+36. As a store owner, I need to be able to view the number of registered customers by store.
+37. As a store owner, I want to be able to add new FAQs to cut down on the number of customer queries
+38. As a store owner, I want to be sure all payment are processed even if the site connection is disturbed during the checkout process.
+39. As a store owner, I want to make the checkout process as easy as possible for customers to increase the number of orders.
+40. As a store owner, I want customers to create accounts so I can store information on customers for marketing purposes.
 
 ##### Back to [top](#table-of-contents)
 
