@@ -14,9 +14,9 @@
     <h1>Burger Bar</h1>
     <h2>Savour the taste of every bite!</h2>
     <div class="my-5">
-        <h4>
+        <h3>
             <a href="{% url 'menu' %}" class="btn btn-lg btn-outline-light rounded-0 text-uppercase py-3">Order Now</a>
-        </h4>
+        </h3>
     </div>
 </header>
 <section class="blurb">
@@ -36,8 +36,7 @@
                 {% else %}
                 <img src="{{ special.featured_image.url }}" alt="Check out the delicious specials on our menu" class="special-image">
                 {% endif %}
-        <h4>{{ special.name }}</h4>
-        <p>{{ special.description }}</p>
+        <h3>{{ special.name }}</h3>
         </a>
     </div>
 {% endfor %}

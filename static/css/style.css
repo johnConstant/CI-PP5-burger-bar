@@ -198,11 +198,11 @@ header h2 {
     text-shadow: var(--text-shadow-small);
 }
 
-header h4 {
+header h3 {
     text-shadow: var(--text-shadow-small);
 }
 
-header h4:hover {
+header h3:hover {
     text-shadow: none;
 }
 
@@ -345,7 +345,7 @@ input::file-selector-button {
     transition: all 0.3s;
 }
 
-.special h4 {
+.special h3 {
     color: white;
     font-family: 'Jost', sans-serif;
     font-size: 3.6rem;
