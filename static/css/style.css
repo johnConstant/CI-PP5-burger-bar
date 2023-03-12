@@ -675,7 +675,8 @@ footer a:hover {
     color: white;
 }
 
-#mc_embed_signup .asterisk {
+#mc_embed_signup label .asterisk,
+#mc_embed_signup .indicates-required .asterisk {
     color: white;
 }
 
