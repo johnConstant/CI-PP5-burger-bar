@@ -130,7 +130,7 @@ Whether you're in a rush or looking for a quick bite to eat, Burger Bar has you 
 
 ### Fonts
 
-Google Fonts were implemented on the website. Outfit with sans-serif as fallback was used thoughout the site to present the content in a clear and legible way for the body content. Vast Shadow with a sans-serif fallback was used for the main page headings.
+Google Fonts were implemented on the website. Jost with sans-serif as fallback was used thoughout the site to present the content in a clear and legible way for the body content. Kaushan Script with a cursive fallback was used for the main page headings.
 
 ### Structure
 
@@ -138,30 +138,37 @@ Google Fonts were implemented on the website. Outfit with sans-serif as fallback
 
 Simplicity, clarity and ease of navigation between pages were the key aspects for design of this website's structure.
 
-At the top of the page there is a recognisable type of navigation bar with website name on the left side and the navigation links to the right of it. The navigation bar also contains a search bar and login and register buttons when logged out and a friendly welcome message and sign ut button when authenticated. The menu collapses to hamburger icon on smaller screen sizes. At the bottom of the page there is a footer with links to social media pages(opening in a separate tab/window).
+At the top of the page there is a recognisable type of navigation bar with website logo in the centre and the authentication links to the right of it. The navigation bar also contains links to the company's social media sites unless there is a defualt location saved in the user's profile. If a default location is saved to the customer's profile, the locations phone number is displayed instead. 
+
+The navigation also contains a sub-navigation menu with links to the most important web pages. This menu collapses to hamburger icon on smaller screen sizes. At the bottom of the page there is a footer with links to social media pages(opening in a separate tab/window).
 
 - The website consists of the following sections:
   - Home page with an overview of the content and aim of the website.
-  - Categories page where the user can see a list of all the different recipe categories published
-  - Category detail page where the related recipes are listed below the category description
-  - Add category page allowing admin user to create a category.
-  - Edit category page where admin user can edit an existing category.
-  - Delete category allowing admin user to delete selected category.
-  - Recipes page where the user can see a list of all the published recipes.
-  - Recipe detail page where authenticated users can like or comment on recipes.
-  - Add recipe page allowing admin user to create a recipe.
-  - Edit recipe page where admin user can edit an existing recipe.
-  - Delete recipe allowing admin user to delete selected recipe.
-  - Articles page where the user can see a list of all the published articles.
-  - Article detail page where authenticated users can like or comment on articles.
-  - Add article page allowing admin user to create a article.
-  - Edit article page where admin user can edit an existing article.
-  - Delete article allowing admin user to delete selected article.
+  - About us page where the user can gain a more in-depth profile of the company and our values.
+  - Menu page with information on each menu item including name, description and price.
+  - Menu item detail page with additional item information such as allergen info and ability to add item to customer's order.
+  - Locations page listing the individual restaurants.
+  - Location detail page with information such as contact info, address, opening hours and location on map.
+  - FAQs page listing some of the most frequently asked question and answers.
+  - Shopping Cart page where users can view the items and cost of their current order.
+  - Checkout page where can enter their order info and securely pay for their order.
+  - Checkout Success page where customers gain a summary of their order after paying for it.
+  - Profile page where customers can view and update their profile and view past orders.
+  - Order history page where customers can view information about a past order and leave feedback on the specific order.
+  - Add menu item page allowing admin user to create a menu item.
+  - Edit menu item page where admin user can edit an existing menu item.
+  - Delete menu item allowing admin user to delete selected menu item.
+  - Add location page allowing admin user to create a location.
+  - Edit location page where admin user can edit an existing location.
+  - Delete location allowing admin user to delete selected location.
+  - Add FAQ page allowing admin user to create a FAQ.
+  - Edit FAQ page where admin user can edit an existing FAQ.
+  - Delete FAQ allowing admin user to delete selected FAQ.
   - Login page for returning user to log in by email or social provider.
   - Register page allowing a new user to sign up by email or social provider.
   - Logout page allowing user to log out of the website.
   - Contact page with contact form which allows users to provide their feedback.
-  - 404 error page.
+  - 400, 403, 404 & 500 error page.
 
 #### Database
 
@@ -277,9 +284,10 @@ The following models were created to represent the database model structure for 
 
 ### Logo and Navigation Bar
 - Featured and consistent on the all pages
-- The nav bar contains links to Home page, Planner page, Exercise page and Profile page.
+- The top-nav bar contains the comapny logo and links to for customers to register or sign in.
   - Logged-in users will see their name in the nav bar with option on click to either view their profile or log out
-  - Not logged in users will have option to either register or log in
+  - Logged-in users with a default location saved to their profile will see the phone number of their default restaurant location.
+- The sub-nav bar contains links to Home page, About Us page, Menu page, Locations page and Contact Us page.
 - The nav bar is fully responsive and changes to a toggler (hamburger menu) on smaller size screens
 - The navbar allows user to easily jump to a specific section on the website
 - User stories covered: 2, 18
@@ -313,7 +321,7 @@ The following models were created to represent the database model structure for 
 ### Footer
 - A footer is displayed at the bottom of the each page
 - Contains links to social media sites (opening in a separate window)
-- Contains copyrights info
+- Contains links to the FAQ page, privacy policy, contact us and sitemap pages
 - User stories covered: 16
 
 <details><summary>See feature images</summary>
@@ -362,10 +370,48 @@ The following models were created to represent the database model structure for 
 </details>
 
 
-### Categories page
-- There are two views depending whether a user is logged in or not
-  - Users who are logged in as admins can see the option to add a category. 
-  - Logged-in users and unauthenticated users will not have the ability to add catgories and therefore won't see this section of the page.
+### Profile page
+- The Profile page contains a list of the details saved to the customer's personal profile.
+- This list contains their default restaurant, personal info and delivery information.
+- Customers can edit the information on their profile by updating this form.
+- Customers can also view a list of their past orders on this page.
+- User stories covered: 15
+
+<details><summary>See feature images</summary>
+
+![Error page](docs/features/error-500-page.png)
+</details>
+
+
+### Order history page
+- The Order history page contains a summary of the customer's order.
+- The summary contains the customer's order and personal information as well as a short summary of the item's added to this order.
+- The summary also display a message notifying the customer of an approximate delivery/collection time and that a confirmation email has been sent to the email supplied.
+- Customers can leave a comment on an order once it has been placed on this page.
+- User stories covered: 15
+
+<details><summary>See feature images</summary>
+
+![Error page](docs/features/error-500-page.png)
+</details>
+
+
+### About Us
+- The about us page contains a header image and some text describing the company's values. 
+- User stories covered: 21
+
+<details><summary>See feature images</summary>
+
+![Logout](docs/features/sign-out.png)
+</details>
+
+
+### Menu page
+- The menu page contains an image, name, description and price for each menu item.
+- Customers can search this page by item name, as well as sort menu items alphabetically or by price.
+- There are two views depending whether a user is logged in or not.
+  - Users who are logged in as admins can see the option to add a menu item. 
+  - Logged-in users and unauthenticated users will not have the ability to add menu items and therefore won't see this section of the page.
 - User stories covered: 3, 10, 12
 <details><summary>See feature images</summary>
 
@@ -374,11 +420,11 @@ The following models were created to represent the database model structure for 
 </details>
 
 
-### Category detail page
+### Menu Item detail page
+- This page contains the featured image, name, description, price and allergen information where applicable.
 - There are two views depending whether a user is logged in or not
-  - Users who are logged in as admins can see the option to edit or delete a category under the general category information. 
-  - Logged-in users and unauthenticated users will not have the ability to edit or delte catgories and therefore won't see this section of the page.
-- Visitors to this page will see the featured image, a category description where applicable and the related recipes listed below in card format.
+  - Users who are logged in as admins can see the option to edit or delete a menu item. 
+  - Logged-in users and unauthenticated users will not have the ability to edit or delete menu items and therefore won't see this section of the page.
 - User stories covered: 3, 10, 12
 <details><summary>See feature images</summary>
 
@@ -387,12 +433,13 @@ The following models were created to represent the database model structure for 
 </details>
 
 
-### Add Category page
-- Logged in admin users have the ability to add recipe categories.
-- Admin users will add a name, description, fetured image and choose whether to publish the category immediately or not.
+### Add Menu Item page
+- Logged in admin users have the ability to add menu items.
+- Admin users will add a name, description, fetured image, price, category, allergens and choose whether to publish the menu item immediately or not.
+- Admin users also have the ability to 'feature' a menu item which will add it to the home page.
 - It is possible to leave some fields blank.
 - For easier use on small screen devices the form increases to full screen width.
-- User is provided with a feedback message that their category has been added.
+- User is provided with a feedback message that their menu item has been added.
 - User stories covered: 4, 13
   
 <details><summary>See feature images</summary>
@@ -401,11 +448,11 @@ The following models were created to represent the database model structure for 
 ![Add category mobile](docs/features/categories-add-category-mobile.png)
 </details>
 
-### Edit Category page
-- Admin users can edit the information of any category.
-- The Edit category page is based off of the Add Category page.
-- Fields are prepopulated with the information from the selected category.
-- User is provided with a feedback message that their category has been updated.
+### Edit Menu Item page
+- Admin users can edit the information of any menu item.
+- The Edit menu item page is based off of the Add menu item page.
+- Fields are prepopulated with the information from the selected menu item.
+- User is provided with a feedback message that their menu item has been updated.
 - User stories covered: 4, 8
 
 <details><summary>See feature images</summary>
@@ -415,10 +462,10 @@ The following models were created to represent the database model structure for 
 </details>
 
 
-### Deleting a Category
-- Located on the category detail page, admin users can delete existing categories.
+### Deleting a Menu Item
+- Located on the menu item detail page, admin users can delete existing menu items.
 - Defensive programming principles applied by presenting user with a modal to confirm deletion.
-- User is provided with a feedback message that their category has been deleted.
+- User is provided with a feedback message that their menu item has been deleted.
 - User stories covered: 5, 6
 
 <details><summary>See feature images</summary>
@@ -428,192 +475,163 @@ The following models were created to represent the database model structure for 
 </details>
 
 
-### Recipes page
-- This page lists all of the recipes in the database ordered by created date.
+### Shopping Cart
+- The Shopping Cart page contains a summary of the items added to the customer's order.
+- The summary contains individual item's images, names, quantities, and total price.
+- Customers can update the quantity of an item on this page or remove an item from their order should they choose.
+- The Shopping Cart page also contains a summary of the order cost, delivery cost and a message letting the customer know how much more they need to spend to avail of our free delivery offer.
+- User stories covered: 15
+
+<details><summary>See feature images</summary>
+
+![Error page](docs/features/error-500-page.png)
+</details>
+
+
+### Checkout
+- The Checkpout page contains a summary of the items added to the customer's order.
+- The summary contains individual item's images, names, quantities, and total price.
+- The Shopping Cart page also contains a summary of the order cost and delivery cost.
+- This page contains a form for customer's to supply their order information, personal information and payment information.
+- Information entered on this page can be saved to the customer's profile.
+- Payments processed on this page are done securely through Stripe with a webhook handling orders where connection may drop before the process is completed.
+- User stories covered: 15
+
+<details><summary>See feature images</summary>
+
+![Error page](docs/features/error-500-page.png)
+</details>
+
+
+### Checkout Succss
+- The Checkpout page contains a summary of the customer's order.
+- The summary contains the customer's order and personal information as well as a short summary of the item's added to this order.
+- The summary also display a message notifying the customer of an approximate delivery/collection time and that a confirmation email has been sent to the email supplied.
+- User stories covered: 15
+
+<details><summary>See feature images</summary>
+
+![Error page](docs/features/error-500-page.png)
+</details>
+
+
+### Locations page
+- The locations page contains a link to the location detail page for each of our restaurants.
 - There are two views depending whether a user is logged in or not.
-  - Users who are logged in as admins can see the option to add a recipe. 
-  - Logged-in users and unauthenticated users will not have the ability to add catgories and therefore won't see this section of the page.
+  - Users who are logged in as admins can see the option to add a new location. 
+  - Logged-in users and unauthenticated users will not have the ability to add locations and therefore won't see this section of the page.
 - User stories covered: 3, 10, 12
 <details><summary>See feature images</summary>
 
-![Recipes](docs/features/recipes-list.png)
-![Recipe cards](docs/features/recipes-cards.png)
-![Recipes page mobile](docs/features/recipes-list-mobile.png)
+![Categories](docs/features/categories-logged-in.png)
+![Categories](docs/features/categories-logged-out.png)
 </details>
 
-### Recipe detail page
+
+### Location detail page
+- This page contains the name, contact information, opening hours and map co-ordinates for each location.
 - There are two views depending whether a user is logged in or not
-  - If logged in as the author of the recipe, the user will have the ability to edit or delete that recipe.
-  - Logged-in users and unauthenticated users will not have the ability to edit or delte recipes and therefore won't see this section of the page.
-- Visitors to this page will see the featured image, recipe title, general recipe information, recipe description steps and ingredients.
-- Logged in users will have the ability to like a recipe.
-- Logged in users will also be able to comment on a recipe.
+  - Users who are logged in as admins can see the option to edit or delete a location. 
+  - Logged-in users and unauthenticated users will not have the ability to edit or delete locations and therefore won't see this section of the page.
 - User stories covered: 3, 10, 12
 <details><summary>See feature images</summary>
 
-![Recipe featured image](docs/features/recipes-featured-image.png)
-![Recipe general info section](docs/features/recipes-info.png)
-![Recipe steps](docs/features/recipes-steps.png)
-![Recipe comments](docs/features/recipes-comments.png)
+![Categories](docs/features/categories-featured-image.png)
+![Categories](docs/features/categories-related-recipes.png)
 </details>
 
-### Like a recipe
-- Logged in users can like a recipe if they choose.
-- Recipes will display the number of likes on their recipe cards and on the recipe detail page.
-- The number of likes messaging is dynamic and the messaging changes based on the number of likes
-- User stories covered: 
-<details><summary>See feature images</summary>
 
-![Recipe likes](docs/features/recipes-no-likes.png)
-![Recipe likes](docs/features/recipes-1-like.png)
-![Recipe likes](docs/features/recipes-multiple-likes.png)
-![Recipe likes](docs/features/recipes-not-liked.png)
-</details>
-
-### Comment on a recipe
-- Logged in users can comment on a recipe and join a conversation.
-- Comments will be displayed on the recipe page beneath the instructions.
-- User is provided with a feedback message that their comment has been updated.
-- User stories covered: 
-<details><summary>See feature images</summary>
-
-![Recipe comments](docs/features/recipes-comments.png)
-</details>
-
-### Add recipe page
-- Logged in admin users have the ability to add recipes.
-- Admin users will add a name, general information, fetured image and choose whether to publish the category immediately or not.
+### Add Location page
+- Logged in admin users have the ability to add locations.
+- Admin users will add a name, address, phone number, email, opening hours and GPS co-ordinates where applicable for the new location.
 - It is possible to leave some fields blank.
 - For easier use on small screen devices the form increases to full screen width.
-- User is provided with a feedback message that their category has been added.
+- User is provided with a feedback message that their location has been added.
 - User stories covered: 4, 13
   
 <details><summary>See feature images</summary>
 
-![Add recipe](docs/features/recipes-add-recipe.png)
-![Add recipe](docs/features/recipes-add-recipe-accordion.png)
-![Add recipe ingredients](docs/features/recipes-add-ingredients.png)
-![Add recipe instructions](docs/features/recipes-add-recipe-instruction.png)
-![Add recipe mobile](docs/features/recipes-add-recipe-mobile.png)
+![Add category](docs/features/categories-add-category.png)
+![Add category mobile](docs/features/categories-add-category-mobile.png)
 </details>
 
-### Edit recipe page
-- Admin users can edit the information of any recipe.
-- The Edit recipe page is based off of the Add recipe page.
-- Fields are prepopulated with the information from the selected recipe.
-- User is provided with a feedback message that their recipe has been updated.
+### Edit Location page
+- Admin users can edit the information of any location.
+- The Edit location page is based off of the Add location page.
+- Fields are prepopulated with the information from the selected location.
+- User is provided with a feedback message that their location has been updated.
 - User stories covered: 4, 8
 
 <details><summary>See feature images</summary>
 
-![Edit recipe](docs/features/recipes-edit-recipe.png)
-![Edit recipe ingredients](docs/features/recipes-edit-recipe-ingredients.png)
-![Edit recipe instructions](docs/features/recipes-edit-recipe-instructions.png)
-![Edit recipe mobile](docs/features/recipes-edit-recipe-mobile.png)
+![View plans](docs/features/categories-edit-category.png)
+![View plans](docs/features/categories-edit-category-mobile.png)
 </details>
 
 
-### Deleting a Recipe
-- Located on the recipe detail page, admin users can delete existing recipes.
+### Deleting a location
+- Located on the location detail page, admin users can delete existing locations.
 - Defensive programming principles applied by presenting user with a modal to confirm deletion.
-- User is provided with a feedback message that their recipe has been deleted.
+- User is provided with a feedback message that their location has been deleted.
 - User stories covered: 5, 6
 
 <details><summary>See feature images</summary>
 
-![Delete recipe](docs/features/recipes-delete-recipe.png)
-![Delete recipe](docs/features/recipes-delete-recipe-modal.png)
+![Delete Category](docs/features/categories-delete-category.png)
+![Delete Category](docs/features/categories-delete-modal.png)
 </details>
 
 
-### Articles page
-- This page lists all of the articles in the database ordered by created date.
+### FAQ page
+- The FAQ page contains a list of the most commonly asked questions in attempt to give the customer as much relevant information as they may need.
 - There are two views depending whether a user is logged in or not.
-  - Users who are logged in as admins can see the option to add a article. 
-  - Logged-in users and unauthenticated users will not have the ability to add catgories and therefore won't see this section of the page.
+  - Users who are logged in as admins can see the option to add a new FAQ and they will also see edit and delete buttons alongside each FAQ. 
+  - Logged-in users and unauthenticated users will not have the ability to add, edit or delete FAQs and therefore won't see this section of the page.
 - User stories covered: 3, 10, 12
 <details><summary>See feature images</summary>
 
-![Articles](docs/features/articles-list.png)
-![Article cards](docs/features/articles-card.png)
+![Categories](docs/features/categories-logged-in.png)
+![Categories](docs/features/categories-logged-out.png)
 </details>
 
-### Article detail page
-- There are two views depending whether a user is logged in or not
-  - If logged in as the author of the article, the user will have the ability to edit or delete that article.
-  - Logged-in users and unauthenticated users will not have the ability to edit or delte articles and therefore won't see this section of the page.
-- Visitors to this page will see the featured image, article title, general article information, article description steps and ingredients.
-- Logged in users will have the ability to like a article.
-- Logged in users will also be able to comment on a article.
-- User stories covered: 3, 10, 12
-<details><summary>See feature images</summary>
-
-![Article featured image](docs/features/articles-featured-image.png)
-![Article general info section](docs/features/articles-info.png)
-![Article comments](docs/features/articles-comments.png)
-</details>
-
-### Like an article
-- Logged in users can like a article if they choose.
-- Articles will display the number of likes on the article detail page.
-- The number of likes messaging is dynamic and the messaging changes based on the number of likes
-- User stories covered: 
-<details><summary>See feature images</summary>
-
-![Article likes](docs/features/recipes-no-likes.png)
-![Article likes](docs/features/recipes-1-like.png)
-![Article likes](docs/features/recipes-multiple-likes.png)
-![Article likes](docs/features/recipes-not-liked.png)
-</details>
-
-### Comment on an article
-- Logged in users can comment on an article and join a conversation.
-- Comments will be displayed on the article page beneath the instructions.
-- User is provided with a feedback message that their comment has been updated.
-- User stories covered: 
-<details><summary>See feature images</summary>
-
-![Article comments](docs/features/articles-comments.png)
-</details>
-
-### Add an article page
-- Logged in admin users have the ability to add articles.
-- Admin users will add a name, general information, fetured image and choose whether to publish the category immediately or not.
-- It is possible to leave some fields blank.
+### Add FAQ page
+- Logged in admin users have the ability to add FAQs.
+- Admin users will add a question and answer.
+- It is not possible to leave some fields blank.
 - For easier use on small screen devices the form increases to full screen width.
-- User is provided with a feedback message that their category has been added.
+- User is provided with a feedback message that their FAQ has been added.
 - User stories covered: 4, 13
   
 <details><summary>See feature images</summary>
 
-![Add article](docs/features/articles-add-article.png)
-
+![Add category](docs/features/categories-add-category.png)
+![Add category mobile](docs/features/categories-add-category-mobile.png)
 </details>
 
-### Edit article page
-- Admin users can edit the information of any article.
-- The Edit article page is based off of the Add article page.
-- Fields are prepopulated with the information from the selected article.
-- User is provided with a feedback message that their article has been updated.
+### Edit FAQ page
+- Admin users can edit the information of any FAQ.
+- The Edit FAQ page is based off of the Add FAQ page.
+- Fields are prepopulated with the information from the selected FAQ.
+- User is provided with a feedback message that their FAQ has been updated.
 - User stories covered: 4, 8
 
 <details><summary>See feature images</summary>
 
-![Edit article](docs/features/articles-edit-article.png)
-
+![View plans](docs/features/categories-edit-category.png)
+![View plans](docs/features/categories-edit-category-mobile.png)
 </details>
 
 
-### Deleting an article
-- Located on the article detail page, admin users can delete existing articles.
+### Deleting a FAQ
+- Located on the FAQ page, admin users can delete existing FAQs.
 - Defensive programming principles applied by presenting user with a modal to confirm deletion.
-- User is provided with a feedback message that their article has been deleted.
+- User is provided with a feedback message that their FAQ has been deleted.
 - User stories covered: 5, 6
 
 <details><summary>See feature images</summary>
 
-![Delete article](docs/features/articles-delete-article.png)
-![Delete article](docs/features/articles-delete-article-modal.png)
+![Delete Category](docs/features/categories-delete-category.png)
+![Delete Category](docs/features/categories-delete-modal.png)
 </details>
 
 
@@ -629,9 +647,9 @@ The following models were created to represent the database model structure for 
 
 
 ### Contact form
-- Contact form allows user to contact the developer and send their message or provide feedback
-- USers are asked for name, email, message topic and message as well as optional email subscription
-- Username on the form is automatically provided for the logged-in user.
+- Contact form allows user to contact the restaurant and send their message or provide feedback
+- Customers are asked for name, email, message topic and message as well as optional email subscription
+- Username on the form is automatically provided for the logged-in customers.
 - User stories covered: 16
 
 <details><summary>See feature images</summary>
