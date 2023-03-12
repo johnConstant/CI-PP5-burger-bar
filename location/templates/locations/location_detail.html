@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_title %}
+    {{ location.name }}
+{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="row mt-3">
@@ -40,15 +44,15 @@
     </div>
     <div class="row">
         <div class="col-12 col-md-10 offset-md-2">
-            <h2 class="category-title my-5">
+            <h1 class="category-title my-5">
                 Where to find us
-            </h2>
+            </h1>
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-md-4 offset-md-2 mt-3">
             <div class="location-details d-flex flex-column">
-                <h3>{{ location.name }}</h3>
+                <h2>{{ location.name }}</h2>
                 <p>{{ location.phone_number }}</p>
                 <p>{{ location.email }}</p>
                 <p>{{ location.street_address1 }}</p>
@@ -67,7 +71,7 @@
         </div>
         <div class="col-12 col-md-6 mt-3">
             <div class="location-opening-hours">
-                <h3>Opening Hours:</h3>
+                <h2>Opening Hours:</h2>
                 {% for day in days %}
                     <p class="day">
                         {{ day.day }}: {{ day.open }} - {{ day.close }}

@@ -55,7 +55,7 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Burger Bar {% block extra_title %} - {% endblock %}</title>
+    <title>Burger Bar - {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
     <div class="container">
@@ -107,7 +107,7 @@
                 {% endif %}
             </div>
             <a class="navbar-brand" href="{% url 'home' %}">
-                <img id="logo" src="{% static 'images/burger_logo.png' %}" width="180" height="100" alt="Burger Bar - Savour every bite"/>
+                <img id="logo" src="{% static 'images/burger_logo.png' %}" width="180" height="auto" alt="Burger Bar - Savour every bite"/>
             </a>
             <div class="profile">
                 {% if user.is_authenticated %}
