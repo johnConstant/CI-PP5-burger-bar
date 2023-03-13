@@ -6,6 +6,7 @@
 
 ## Table of Contents
   - [About](#about)
+  - [Business Model](#business-model)
   - [User Goals](#user-goals)
   - [Site Owner Goals](#site-owner-goals)
   - [User Experience](#user-experience)
@@ -43,6 +44,27 @@ Our menu features a variety of burgers made from fresh, never frozen, 100% Angus
 At Burger Bar, we believe in using the freshest ingredients and maintaining high standards of quality and cleanliness. Our team is committed to providing exceptional customer service and ensuring that every customer leaves satisfied.
 
 Whether you're in a rush or looking for a quick bite to eat, Burger Bar has you covered with delicious, high-quality fast food that you can feel good about.
+
+### Business Model
+The e-commerce business model for Burger Bar, a fast-food restaurant that offers online ordering and delivery, can be described as follows:
+
+1. Online Platform: Burger Bar will need to establish an online platform that customers can use to place their orders. This platform should be user-friendly, easy to navigate, and offer a seamless ordering experience.
+
+2. Marketing: The success of Burger Bar's e-commerce business model will largely depend on effective marketing strategies. The following are some marketing strategies that can be used:
+
+  - Social Media: Burger Bar can use social media platforms such as Facebook, Twitter, and Instagram to promote their online ordering and delivery services. They can use these platforms to share mouth-watering pictures of their burgers and other menu items, promote special deals and discounts, and engage with their customers.
+
+  - Email Marketing: Burger Bar can also use email marketing to reach out to their customers and promote their online ordering and delivery services. They can use email to send out newsletters, updates, and special offers to their subscribers.
+
+  - Search Engine Optimization (SEO): SEO can be used to increase the visibility of Burger Bar's online platform on search engines like Google. This will help attract more customers to their website.
+
+  - Paid Advertising: Paid advertising can also be used to promote Burger Bar's online ordering and delivery services. They can use platforms like Google AdWords, Facebook Ads, and Instagram Ads to target potential customers.
+
+3. Delivery: Burger Bar will need to ensure that their delivery service is fast and reliable. They should have a dedicated team for delivery and use technology to optimize delivery routes and ensure timely delivery.
+
+4. Customer Service: Customer service is crucial in the e-commerce business model. Burger Bar should ensure that their customer service is top-notch and responsive to customer queries and complaints.
+
+In conclusion, the e-commerce business model for Burger Bar will involve establishing a user-friendly online platform, implementing effective marketing strategies, optimizing delivery routes, providing excellent customer service, and offering loyalty programs. By doing this, Burger Bar can attract more customers, increase sales, and grow their business.
 
 ### User Goals
 
@@ -189,44 +211,169 @@ The navigation also contains a sub-navigation menu with links to the most import
 - The backend consists of Python built with the Django framework with a database of a Postgres for the deployed version
 - Two database models contain all fields stored in the database and mimics the structure of what is actually stored in the Postgres database
 
-<details><summary>Show diagram</summary>
-<img src="docs/Database ER diagram (crow's foot).jpeg">
-</details>
-
 The following models were created to represent the database model structure for the website:
 
-##### User Model
-- The User model contains information about the user. It is part of the Django allauth library
+## Models  
 
-##### Category Model
-- The Category model contains the following fields: title, description, featured_image and Recipe
-- The model has a many-to-many relationship with Recipe
+### User Model
 
-##### Recipe Model
-- The Recipe model represents a specific recipe and contains its general information
-- The Recipe model contains the following fields: title, description, featured image, categories, servings, prep time, cook time, difficulty, author, status, created date, last modified date, ingredients and instructions
-- The model has a many-to-many relationship with Category
-- It contains Ingredient as a foreign key
-- It contains Instruction as a foreign key
+| Key        | Name         | Type        |
+| ---------- | ------------ | ----------- |
+| PrimaryKey | user_id      | AutoField   |
+|            | password     | VARCHAR(45) |
+|            | last_login   | VARCHAR(45) |
+|            | is_superuser | BOOLEAN     |
+|            | username     | VARCHAR(45) |
+|            | first_name   | VARCHAR(45) |
+|            | last_name    | VARCHAR(45) |
+|            | email        | VARCHAR(45) |
+|            | is_staff     | BOOLEAN     |
+|            |              |             |
+|            | is_active    | BOOLEAN     |
+|            | date_joined  | VARCHAR(45) |
 
-##### Ingredient Model
-- The Ingredient model represents an ingredinet for a specific recipe's ingredients
-- The Ingredient model contains the following fields: name, amount, notes and recipe
-- It contains Recipe as a foreign key
+### User Profile Model
 
-##### Instruction Model
-- The Instruction model represents an instruction for a specific recipe's instructions
-- The Instruction model contains the following fields: body and recipe
-- It contains Recipe as a foreign key
+| Key        | Name                 | Type          |
+| ---------- | -------------------- | ------------- |
+| PrimaryKey | user_profile_id      | AutoField     |
+| ForeignKey | user                 | User model    |
+| ForeignKey | default_location     | Location model|
+|            | default_phone_number | CharField[20] |
+|            | default_address1     | CharField[80] |
+|            | default_address2     | CharField[80] |
+|            | default_town_city    | CharField[40] |
+|            | default_county       | CharField[80] |
+|            | default_postcode     | CharField[20] |
+|            | default_country      | CharField[40] |
 
-##### Comment Model (Recipe)
-- The Comment model represents a comment on a specific recipe
-- The Comment model contains the following fields: name, email, body, created_date, approved and recipe
-- It contains Recipe as a foreign key
+### Menu Item Model
 
-##### Article Model
-- The Article model represents a specific article and contains its general information
-- The Article model contains the following fields: title, description, featured image, author, status, created date and last modified date.
+| Key        | Name           | Type          |
+| ---------- | -------------- | ------------- |
+| PrimaryKey | menu_item_id   | AutoField     |
+|            | name           | CharField[50] |
+|            | slug           | SlugField     |
+|            | description    | TextField     |
+|            | price          | DecimalField  |
+|            | featured image | ImageField    |
+| ForeignKey | allergens      | Allergen      |
+| ForeignKey | category       | Category      |
+|            | status         | IntegerField  |
+|            | feature        | BooleanField  |
+
+### Menu Category Model
+
+| Key        | Name           | Type          |
+| ---------- | -------------- | ------------- |
+| PrimaryKey | category_id    | AutoField     |
+|            | name           | CharField[50] |
+|            | slug           | SlugField     |
+|            | description    | TextField     |
+|            | price          | DecimalField  |
+|            | featured image | ImageField    |
+
+### Allergen Model
+
+| Key        | Name           | Type          |
+| ---------- | -------------- | ------------- |
+| PrimaryKey | product_id     | AutoField     |
+|            | name           | CharField[50] |
+|            | description    | TextField     |
+|            | icon           | ImageField    |
+
+### Locations Model  
+
+| Key        | Name          | Type          |
+| ---------- | ------------- | ------------- |
+| PrimaryKey | category_id   | AutoField     |
+| ForeignKey | opening_hours | Location model|
+|            | email         | EmailField    |
+|            | phone_number  | CharField[20] |
+|            | address1      | CharField[80] |
+|            | address2      | CharField[80] |
+|            | town_city     | CharField[40] |
+|            | county        | CharField[80] |
+|            | postcode      | CharField[20] |
+|            | country       | CharField[40] |
+|            | latitude      | DecimalField  |
+|            | longitude     | DecimalField  |
+
+### Hours Model  
+
+| Key        | Name          | Type          |
+| ---------- | ------------- | ------------- |
+| PrimaryKey | hours_id      | AutoField     |
+|            | day           | CharField[9]  |
+|            | open          | TimeField     |
+|            | close         | TimeField     |
+
+### FAQ Model
+
+| Key        | Name           | Type                |
+| ---------- | -------------- | ------------------- |
+| PrimaryKey | faq_id         | AutoField           |
+|            | question       | TextField           |
+|            | answer.        | TextField           |
+
+### Order Model  
+
+| Key        | Name            | Type               |
+| ---------- | --------------- | ------------------ |
+| PrimaryKey | order_id        | AutoField          |
+|            | order_number    | CharField[40]      |
+|            | order_type      | CharField[32]      |
+| ForeignKey | order_location  | Location Model     |
+| ForeignKey | user_profile    | User profile Model |
+|            | full_name       | CharField[50]      |
+|            | email           | EmailField[254]    |
+|            | phone_number    | CharField[20]      |
+|            | address1        | CharField[80]      |
+|            | address2        | CharField[80]      |
+|            | town_city       | CharField[40]      |
+|            | postcode        | CharField[20]      |
+|            | county          | CharField[80]      |
+|            | country         | CharField[40]      |
+|            | delivery_cost   | DecimalField[6]    |
+|            | order_total     | DecimalField[10]   |
+|            | grand_total     | DecimalField[10]   |
+|            | order_date      | TimeField          |
+|            | original_basket | TextField          |
+|            | stripe_pid      | CharField          |
+
+### OrderLineItem Model  
+
+| Key        | Name             | Type            |
+| ---------- | ---------------- | --------------- |
+| PrimaryKey | OrderLineItem_id | AutoField       |
+| ForeignKey | order            | Order Model     |
+| ForeignKey | item             | MenuItem Model  |
+|            | quantity         | IntegerField    |
+|            | line_item_total  | DecimalField[6] |
+
+### Comment Model
+
+| Key        | Name         | Type                                   |
+| ---------- | ------------ | -------------------------------------- |
+| ForeignKey | order        | Order model<br>Cascade on<br>delete    |
+|            | name         | CharField[80]                          |
+|            | email        | EmailField                             |
+|            | body         | TextField                              |
+|            | created_date | DateTimeField<br>auto_now_<br>add_true |
+|            | approved     | BooleanField<br>default False          |
+
+### ContactUs Model
+
+| Key        | Name               | Type             |
+| ---------- | ------------------ | ---------------- |
+| PrimaryKey | contact_id         | AutoField        |
+| ForeignKey | user_Profile       | UserProfile model|
+|            | name               | CharField        |
+|            | email              | EmailField       |
+|            | email_subscription | BooleanField     |
+|            | phone              | PhoneNumberField |
+|            | message            | TextField        |  
+|            | created_date       | DateTimeField    |
 
 ### Wireframes
 
@@ -1527,10 +1674,9 @@ The website was tested on the following devices:
 | The custom widget for updating images on front end forms is not working correctly | Style the Clearable File Input widget  |
 | Footer styling issues | Fix footer to bottom of pages |
 | Issue with running of Unit Tests | |
-## Future Considerations
 
-| **Feature** | 
-| ------- | 
+## Project Board
+Originally I had used monday.com as my project management tool before moving it to GitHub Projects on the advice of my mentor.
 
 ##### Back to [top](#table-of-contents)
 
