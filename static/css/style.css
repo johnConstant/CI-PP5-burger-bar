@@ -269,7 +269,7 @@ input::file-selector-button {
 
 .signup input[type='checkbox'] {
     box-shadow: none;
-    width: auto;
+    width: 1.6rem;
 }
 
 .qty_input {
@@ -643,10 +643,6 @@ input::file-selector-button {
 
 footer {
     min-height: 15vh;
-    /* background-image: url('/static/images/Brown-leather-texture.webp');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
     background-color: var(--primary-colour);
     color: white;
     font-weight: bold;
@@ -717,7 +713,6 @@ footer a:hover {
 .footer-links a {
     font-size: 1.4rem;
 }
-
 
 /* Error pages */
 

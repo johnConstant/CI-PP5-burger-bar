@@ -9,182 +9,227 @@
 
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/about/</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?category=Burgers</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?category=Sides</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?category=Sauces</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?category=Drinks</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?category=Desserts</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?category=Special%20Offers</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/locations/</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/contact/</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/cart/</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/bbq-burger</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/breakfast-burger</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/meal-deal</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/faqs/</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/privacy-policy/</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/sitemap</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/accounts/password/reset/</loc>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/chicken-burger</loc>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/classic-cheeseburger</loc>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/el-diablo</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/bacon-cheeseburger</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/bbq-burger</loc>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/chicken-burger</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/breakfast-burger</loc>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/classic-cheeseburger</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/side-salad</loc>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/garlic-bread</loc>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/onion-rings</loc>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/el-diablo</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/hand-cut-chips</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/side-salad</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/onion-rings</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/garlic-bread</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?page=2</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?page=3</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/sweet-chilli-sauce</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/garlic-mayo</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/spicy-chilli-sauce</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/honey-mustard</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/homemade-bbq-sauce</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/330ml-can-of-coca-cola</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/blueberry-cheesecake</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/carrot-cake</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/chocolate-cake</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/chocolate-brownie</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/locations/patrick-street/</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/locations/maccurtain-street/</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/locations/wilton/</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ci-pp5-burger-bar.herokuapp.com/menu/?page=1</loc>
+  <lastmod>2023-03-13T20:53:51+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 
