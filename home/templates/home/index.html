@@ -15,26 +15,72 @@
         </h3>
     </div>
 </header>
+<!-- Free Delivery panel -->
+<section class="special-wrapper">
+    <div class="special">
+        <h2>Free Delivery</h2>
+        <p>We are now offering free delivery on all orders over &euro;50 </p>
+    </div>
+</section>
+<!-- Company info -->
 <section class="blurb">
     <div class="col-12 col-md-8 offset-md-2 p-5">
         <h2>What we stand for</h2>
         <p>Welcome to Burger Bar, where delicious burgers are our specialty! We are a fast-casual restaurant dedicated to providing our customers with high-quality, fresh, and flavorful burgers that will satisfy any craving. Our menu features a variety of options, from classic cheeseburgers to unique creations that you won't find anywhere else. We believe that a great burger starts with the best ingredients, so we use only the freshest, locally-sourced meats, cheeses, and toppings. Whether you're looking for a quick lunch, dinner with friends, or a satisfying meal on the go, Burger Bar has something for everyone. So come on in, grab a burger, and taste the difference for yourself!</p>
     </div>
 </section>
-<!-- Specials panel -->
-<section id="specials" class="container">
-{% for special in specials %}
-    <div class="special">
-        <a href="{% url 'menu_detail' special.slug %}">
-        <div class="content-overlay"></div>
-        {% if "placeholder" in special.featured_image.url %}
-                <img src="https://envato-shoebox-0.imgix.net/5877/b8eb-fffe-471b-9146-6f70fa2cf235/Pizza-3.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=4df0f4a84d7eb8c41ae9dc69880e640cs" class="category-image">>
-                {% else %}
-                <img src="{{ special.featured_image.url }}" alt="Check out the delicious specials on our menu" class="special-image">
-                {% endif %}
-        <h3>{{ special.name }}</h3>
-        </a>
+<!-- Most Popular -->
+<section class="wrapper container my-5">
+    <h2 class="text-center">Most Popular Items</h2>
+    <div class="top">
+        <div class="hero">
+            <a href="/menu/{{ specials.0.slug }}">
+                <div class="ribbon">
+                    <span class="ribbon__content text-center"
+                        >Most Popular</span
+                    >
+                </div>
+                <img
+                    src="{{ specials.0.featured_image.url }}"
+                    alt="{{ specials.0.name }}"
+                >
+                <div class="hero-info">
+                    <h3>{{ specials.0.name }}</h3>
+                </div>
+            </a>
+        </div>
+        <div class="cta cta1">
+            <a href="/menu/{{ specials.1.slug }}">
+                <div class="ribbon">
+                    <span class="ribbon__content text-center"
+                        >Most Popular</span
+                    >
+                </div>
+                <img
+                    src="{{ specials.1.featured_image.url }}"
+                    alt="{{ specials.1.name }}"
+                >
+                <div class="hero-info">
+                    <h3>{{ specials.1.name }}</h3>
+                </div>
+            </a>
+        </div>
+        <div class="cta cta2">
+            <a href="/menu/{{ specials.2.slug }}">
+                <div class="ribbon">
+                    <span class="ribbon__content text-center"
+                        >Most Popular</span
+                    >
+                </div>
+                <img
+                    src="{{ specials.2.featured_image.url }}"
+                    alt="{{ specials.2.name }}"
+                >
+                <div class="hero-info">
+                    <h3>{{ specials.2.name }}</h3>
+                </div>
+            </a>
+        </div>
     </div>
-{% endfor %}
 </section>
 {% endblock %}

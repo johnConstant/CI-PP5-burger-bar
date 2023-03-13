@@ -5,7 +5,7 @@ from menu.models import Menu_Item
 
 def index(request):
     """ A view to return the index page """
-    special = Menu_Item.objects.filter(featured=True)[:1]
+    special = Menu_Item.objects.filter(featured=True)[:3]
 
     context = {
         'specials': special
