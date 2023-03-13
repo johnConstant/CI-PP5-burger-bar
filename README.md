@@ -304,7 +304,7 @@ The following models were created to represent the database model structure for 
 - The sub-nav bar contains links to Home page, About Us page, Menu page, Locations page and Contact Us page.
 - The nav bar is fully responsive and changes to a toggler (hamburger menu) on smaller size screens
 - The navbar allows user to easily jump to a specific section on the website
-- User stories covered: 2, 18
+- User stories covered: 1
 
 <details><summary>See feature images</summary>
 
@@ -319,7 +319,7 @@ The following models were created to represent the database model structure for 
 ### Home page
 - Home page includes nav bar, main body and a footer
 - Home page main body includes the featured recipes section, a description of the website and what its users can find and expect, the most popular recipes section, most recent categories section, most recent articles section and sign up form. 
-- User stories covered: 1
+- User stories covered: 4, 5
 
 <details><summary>See feature images</summary>
 
@@ -334,7 +334,7 @@ The following models were created to represent the database model structure for 
 - A footer is displayed at the bottom of the each page
 - Contains links to social media sites (opening in a separate window)
 - Contains links to the FAQ page, privacy policy, contact us and sitemap pages
-- User stories covered: 16
+- User stories covered: 2, 3, 20
 
 <details><summary>See feature images</summary>
 
@@ -350,7 +350,7 @@ The following models were created to represent the database model structure for 
 - Users can register for an account with Google and Facebook social sign on
 - User cannot register the same details twice for an account
 - Once register the users are immediately logged in and taken to the home page
-- User stories covered: 3, 14
+- User stories covered: 21, 22, 40
 
 <details><summary>See feature images</summary>
 
@@ -367,7 +367,7 @@ The following models were created to represent the database model structure for 
 - Users can sign in to there account with Google and Facebook social sign on
 - Both fields are mandatory
 - Once logged in the user will be navigated to the planner page
-- User stories covered: 10, 12, 14
+- User stories covered: 21, 22
 
 <details><summary>See feature images</summary>
 
@@ -380,7 +380,7 @@ The following models were created to represent the database model structure for 
 
 ### Logout
 - Confirmation screen for Logged in user to logout from their account 
-- User stories covered: 21
+- User stories covered: 21, 22
 
 <details><summary>See feature images</summary>
 
@@ -393,7 +393,7 @@ The following models were created to represent the database model structure for 
 - This list contains their default restaurant, personal info and delivery information.
 - Customers can edit the information on their profile by updating this form.
 - Customers can also view a list of their past orders on this page.
-- User stories covered: 15
+- User stories covered: 15, 23, 40
 
 <details><summary>See feature images</summary>
 
@@ -407,7 +407,7 @@ The following models were created to represent the database model structure for 
 - The summary contains the customer's order and personal information as well as a short summary of the item's added to this order.
 - The summary also display a message notifying the customer of an approximate delivery/collection time and that a confirmation email has been sent to the email supplied.
 - Customers can leave a comment on an order once it has been placed on this page.
-- User stories covered: 15
+- User stories covered: 16, 17
 
 <details><summary>See feature images</summary>
 
@@ -420,7 +420,7 @@ The following models were created to represent the database model structure for 
 
 ### About Us
 - The about us page contains a header image and some text describing the company's values. 
-- User stories covered: 21
+- User stories covered: 5
 
 <details><summary>See feature images</summary>
 
@@ -434,7 +434,7 @@ The following models were created to represent the database model structure for 
 - There are two views depending whether a user is logged in or not.
   - Users who are logged in as admins can see the option to add a menu item. 
   - Logged-in users and unauthenticated users will not have the ability to add menu items and therefore won't see this section of the page.
-- User stories covered: 3, 10, 12
+- User stories covered: 6, 7, 8, 11, 30, 36
 <details><summary>See feature images</summary>
 
 ![Menu List](docs/validation/feature_menu_list.png)
@@ -454,7 +454,8 @@ The following models were created to represent the database model structure for 
 - There are two views depending whether a user is logged in or not
   - Users who are logged in as admins can see the option to edit or delete a menu item. 
   - Logged-in users and unauthenticated users will not have the ability to edit or delete menu items and therefore won't see this section of the page.
-- User stories covered: 3, 10, 12
+- User stories covered: 6, 10, 11
+
 <details><summary>See feature images</summary>
 
 ![Categories](docs/validation/feature_menuDetail_emptyCart_desktop.png)
@@ -473,7 +474,7 @@ The following models were created to represent the database model structure for 
 - It is possible to leave some fields blank.
 - For easier use on small screen devices the form increases to full screen width.
 - User is provided with a feedback message that their menu item has been added.
-- User stories covered: 4, 13
+- User stories covered: 24, 36
   
 <details><summary>See feature images</summary>
 
@@ -485,7 +486,7 @@ The following models were created to represent the database model structure for 
 - The Edit menu item page is based off of the Add menu item page.
 - Fields are prepopulated with the information from the selected menu item.
 - User is provided with a feedback message that their menu item has been updated.
-- User stories covered: 4, 8
+- User stories covered: 24, 36
 
 <details><summary>See feature images</summary>
 
@@ -497,7 +498,7 @@ The following models were created to represent the database model structure for 
 - Located on the menu item detail page, admin users can delete existing menu items.
 - Defensive programming principles applied by presenting user with a modal to confirm deletion.
 - User is provided with a feedback message that their menu item has been deleted.
-- User stories covered: 5, 6
+- User stories covered: 24, 36
 
 <details><summary>See feature images</summary>
 
@@ -510,7 +511,7 @@ The following models were created to represent the database model structure for 
 - The summary contains individual item's images, names, quantities, and total price.
 - Customers can update the quantity of an item on this page or remove an item from their order should they choose.
 - The Shopping Cart page also contains a summary of the order cost, delivery cost and a message letting the customer know how much more they need to spend to avail of our free delivery offer.
-- User stories covered: 15
+- User stories covered: 9, 10, 12, 13
 
 <details><summary>See feature images</summary>
 
@@ -528,7 +529,7 @@ The following models were created to represent the database model structure for 
 - This page contains a form for customer's to supply their order information, personal information and payment information.
 - Information entered on this page can be saved to the customer's profile.
 - Payments processed on this page are done securely through Stripe with a webhook handling orders where connection may drop before the process is completed.
-- User stories covered: 15
+- User stories covered: 9, 14, 15, 39, 40
 
 <details><summary>See feature images</summary>
 
@@ -540,7 +541,7 @@ The following models were created to represent the database model structure for 
 - The Checkpout page contains a summary of the customer's order.
 - The summary contains the customer's order and personal information as well as a short summary of the item's added to this order.
 - The summary also display a message notifying the customer of an approximate delivery/collection time and that a confirmation email has been sent to the email supplied.
-- User stories covered: 15
+- User stories covered: 39
 
 <details><summary>See feature images</summary>
 
@@ -553,7 +554,7 @@ The following models were created to represent the database model structure for 
 - There are two views depending whether a user is logged in or not.
   - Users who are logged in as admins can see the option to add a new location. 
   - Logged-in users and unauthenticated users will not have the ability to add locations and therefore won't see this section of the page.
-- User stories covered: 3, 10, 12
+- User stories covered: 18, 25, 35
 <details><summary>See feature images</summary>
 
 ![Locations](docs/validation/feature_locations.png)
@@ -565,7 +566,8 @@ The following models were created to represent the database model structure for 
 - There are two views depending whether a user is logged in or not
   - Users who are logged in as admins can see the option to edit or delete a location. 
   - Logged-in users and unauthenticated users will not have the ability to edit or delete locations and therefore won't see this section of the page.
-- User stories covered: 3, 10, 12
+- User stories covered: 18, 25, 35
+
 <details><summary>See feature images</summary>
 
 ![Location detail](docs/validation/feature_locationDetails.png)
@@ -579,7 +581,7 @@ The following models were created to represent the database model structure for 
 - It is possible to leave some fields blank.
 - For easier use on small screen devices the form increases to full screen width.
 - User is provided with a feedback message that their location has been added.
-- User stories covered: 4, 13
+- User stories covered: 18, 25, 35
   
 <details><summary>See feature images</summary>
 
@@ -591,7 +593,7 @@ The following models were created to represent the database model structure for 
 - The Edit location page is based off of the Add location page.
 - Fields are prepopulated with the information from the selected location.
 - User is provided with a feedback message that their location has been updated.
-- User stories covered: 4, 8
+- User stories covered: 25, 35
 
 <details><summary>See feature images</summary>
 
@@ -603,7 +605,7 @@ The following models were created to represent the database model structure for 
 - Located on the location detail page, admin users can delete existing locations.
 - Defensive programming principles applied by presenting user with a modal to confirm deletion.
 - User is provided with a feedback message that their location has been deleted.
-- User stories covered: 5, 6
+- User stories covered: 25, 35
 
 <details><summary>See feature images</summary>
 
@@ -616,7 +618,8 @@ The following models were created to represent the database model structure for 
 - There are two views depending whether a user is logged in or not.
   - Users who are logged in as admins can see the option to add a new FAQ and they will also see edit and delete buttons alongside each FAQ. 
   - Logged-in users and unauthenticated users will not have the ability to add, edit or delete FAQs and therefore won't see this section of the page.
-- User stories covered: 3, 10, 12
+- User stories covered: 19, 26, 38
+
 <details><summary>See feature images</summary>
 
 ![FAQs](docs/validation/feature_FAQs.png)
@@ -628,7 +631,7 @@ The following models were created to represent the database model structure for 
 - It is not possible to leave some fields blank.
 - For easier use on small screen devices the form increases to full screen width.
 - User is provided with a feedback message that their FAQ has been added.
-- User stories covered: 4, 13
+- User stories covered: 26, 38
   
 <details><summary>See feature images</summary>
 
@@ -640,7 +643,7 @@ The following models were created to represent the database model structure for 
 - The Edit FAQ page is based off of the Add FAQ page.
 - Fields are prepopulated with the information from the selected FAQ.
 - User is provided with a feedback message that their FAQ has been updated.
-- User stories covered: 4, 8
+- User stories covered: 26, 38
 
 <details><summary>See feature images</summary>
 
@@ -652,7 +655,7 @@ The following models were created to represent the database model structure for 
 - Located on the FAQ page, admin users can delete existing FAQs.
 - Defensive programming principles applied by presenting user with a modal to confirm deletion.
 - User is provided with a feedback message that their FAQ has been deleted.
-- User stories covered: 5, 6
+- User stories covered: 26, 38
 
 <details><summary>See feature images</summary>
 
@@ -663,7 +666,7 @@ The following models were created to represent the database model structure for 
 
 ### Feedback messages
 - User is provided with feedback message about the action their performed, eg. added, edited or deleted a plan or logged-in, registered, logged-out, etc.
-- User stories covered: 7
+- User stories covered: 
 
 <details><summary>See feature images</summary>
 
@@ -678,7 +681,7 @@ The following models were created to represent the database model structure for 
 - Contact form allows user to contact the restaurant and send their message or provide feedback
 - Customers are asked for name, email, message topic and message as well as optional email subscription
 - Username on the form is automatically provided for the logged-in customers.
-- User stories covered: 16
+- User stories covered: 20, 28
 
 <details><summary>See feature images</summary>
 
@@ -758,13 +761,6 @@ The W3C Markup Validation Service was used to validate the HTML of the website.
 <img src="docs/validation/HTML_validation_register.png">
 </details>
 
-<details><summary>Logout</summary>
-<img src="docs/validation/HTML_validation_signout.png">
-</details>
-
-<details><summary>Error Pages (400, 403, 404, 500)</summary>
-<img src="docs/validation/HTML_validation_error-pages.html.JPG"> 
-</details>
 
 
 ### CSS Validation
@@ -782,13 +778,7 @@ JSHint JS Validation Service was used to validate the Javascript files. No error
 </details>
 
 ### PEP8 Validation
-PEP8 Validation Service was used to check the code for PEP8 requirements. All the code passes with no errors and no warnings to show.
-
-All python files are pep8 compliant except for settings.py which has 5 issues. Files were checked using the pycodestyle python package.
-
-<details><summary>Validation</summary>
-<img src="docs/validation/validation-python.png">
-</details>
+All python code has been written according to PEP8 compliance standards with all code style issues resolved in files created by me.
 
 
 ### Wave
@@ -838,9 +828,6 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the website's
 <img src="docs/validation/WAVE_validation_register.png">
 </details>
 
-<details><summary>Error Pages (400, 403, 404, 500)</summary>
-<img src="docs/validation/WAVE_validation_error.html.JPG"> 
-</details>
 
 ##### Back to [top](#table-of-contents)
 
@@ -1352,6 +1339,160 @@ Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/checkout/order/ logged
 <img src="docs/validation/feature_orders_backEnd_delete.png">
 </details>
 
+
+32. As a store owner, I want to increase the number of social media fans I have.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | social media links displayed in top nav when logged out | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | scroll to footer where social media links are always diplayed | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_footer_socialMediaHover.png">
+<img src="docs/validation/feature_nav_desktop_loggedOut">
+</details>
+
+33. As a store owner, I want to increase the number of people I can email about new products and special offers to increase foot traffic in the restaurants.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | Scroll to footer and fill out email subscription form | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_footer.png">
+</details>
+
+34. As a store owner, I want the highest possible ranking in the Google search results (SEO best practices).
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+<!-- Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | Scroll to footer and fill out email subscription form | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_footer.png">
+</details> -->
+
+35. As a store owner, I want to be able to add new locations to the site as they open increasing sales.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
+Click on location add + button | location add form is presented to user in backend | Works as expected |
+Fill out form with relevant details and click save | New location is added to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/locations logged in as superuser | Add location button is displayed above Locations list | Works as expected |
+Click on location add + button | location add form is presented to user in frontend | Works as expected |
+Fill out form with relevant details and click save | New location is added to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/location/location/ logged in as superuser and update location information | Updated location is saved to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/locations/ logged in as superuser choose the item to edit. Front-end form is presented to the user. Update location information | Updated location is saved to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/location/location/ logged in as superuser and choose location for deletion. Scroll to end of page and click delete button | location is removed from the database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/locations/ logged in as superuser choose the item to delete. Modal is presented to user confirming the action | location is removed from the database | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_location_add.png">
+<img src="docs/validation/feature_location_backEnd_add.png">
+<img src="docs/validation/feature_location_edit.png">
+<img src="docs/validation/feature_location_backEnd_edit.png">
+<img src="docs/validation/feature_location_delete.png">
+<img src="docs/validation/feature_location_backEnd_delete.png">
+</details>
+
+36. As a store owner, I want to be able to add new menu items to the menu increasing sales.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
+Click on Menu Item add + button | Menu Item add form is presented to user in backend | Works as expected |
+Fill out form with relevant details and click save | New Menu Item is added to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/menu logged in as superuser | Add Menu Item button is displayed above Menu list | Works as expected |
+Click on Menu Item add + button | Menu Item add form is presented to user in frontend | Works as expected |
+Fill out form with relevant details and click save | New Menu Item is added to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/menu/menu_item/ logged in as superuser and update menu item information | Updated menu item is saved to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/menu/ logged in as superuser choose the item to edit. Front-end form is presented to the user. Update menu item information | Updated menu item is saved to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/menu/menu_item/ logged in as superuser and choose menu item for deletion. Scroll to end of page and click delete button | Menu item is removed from the database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/menu/ logged in as superuser choose the item to delete. Modal is presented to user confirming the action | Menu item is removed from the database | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_menuItem_add.png">
+<img src="docs/validation/feature_menuItem_backEnd_add.png">
+<img src="docs/validation/feature_menuItem_edit.png">
+<img src="docs/validation/feature_menuItem_backEnd_edit.png">
+<img src="docs/validation/feature_menuItem_delete.png">
+<img src="docs/validation/feature_menuItem_backEnd_delete.png">
+</details>
+
+37. As a store owner, I want to be able to add new FAQs to cut down on the number of customer queries
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
+Click on FAQ add + button | FAQ add form is presented to user in backend | Works as expected |
+Fill out form with relevant details and click save | New FAQ is added to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/ logged in as superuser | Add FAQ button is displayed above Menu list | Works as expected |
+Click on FAQ add + button | FAQ add form is presented to user in frontend | Works as expected |
+Fill out form with relevant details and click save | New FAQ is added to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/faqs/faq/ logged in as superuser and update FAQ information | Updated FAQ is saved to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/faqs/ logged in as superuser choose the item to edit. Front-end form is presented to the user. Update FAQ information | Updated FAQ is saved to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/faqs/faq/ logged in as superuser and choose FAQ for deletion. Scroll to end of page and click delete button | FAQ is removed from the database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/faqs/ logged in as superuser choose the item to delete. Modal is presented to user confirming the action | FAQ is removed from the database | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_faq_add.png">
+<img src="docs/validation/feature_faq_backEnd_add.png">
+<img src="docs/validation/feature_faq_edit.png">
+<img src="docs/validation/feature_faq_backEnd_edit.png">
+<img src="docs/validation/feature_faq_delete.png">
+<img src="docs/validation/feature_faq_backEnd_delete_1.png">
+<img src="docs/validation/feature_faq_backEnd_delete_2.png">
+<img src="docs/validation/feature_faq_backEnd_delete_3.png">
+</details>
+
+38. As a store owner, I need to be able to view the number of registered customers and filter by store.
+
+**Step** | **Expected Result** | **Actual Result**
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/auth/user/ | List of registered customers is presented to the user | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/auth/user/ | List of registered customers is presented to the user | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_accounts.png">
+<img src="docs/validation/feature_contact_messages.png">
+<img src="docs/validation/feature_contact_message.png">
+</details>
+
+39. As a store owner, I want to be sure all payment are processed even if the site connection is disturbed during the checkout process.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+<!-- Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | Scroll to footer and fill out email subscription form | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_footer.png">
+</details> -->
+
+40. As a store owner, I want to make the checkout process as easy as possible for customers to increase the number of orders.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+<!-- Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | Scroll to footer and fill out email subscription form | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_footer.png">
+</details> -->
+
+41. As a store owner, I want customers to create accounts so I can store information on customers for marketing purposes.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/accounts/signup/ and fill submit form | account is created for the user with the submitted details | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/profile/ and add additional information to your profile | account details are updated to include new information | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/accounts/signup/ and click sign up with Google button | account is created for the user with details from Google account | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/accounts/signup/ and click sign up with Facebook button | account is created for the user with details from Facebook account | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_register.png">
+<img src="docs/validation/feature_profile.png">
+<img src="docs/validation/feature_socialSignIn.png">
+</details>
+
 ### Automated testing
 
 Automated testing was done using the Django's unit tests from a Python standard library module: unittest. 
@@ -1383,16 +1524,13 @@ The website was tested on the following devices:
 
 | **Bug** | **Fix** |
 | ------- | ------- |
-| The post method on the RecipeUpdate class is not working correctly | Update RecipeUpdate to be function based view and use inline formset to update ingredients and instructions |
+| The custom widget for updating images on front end forms is not working correctly | Style the Clearable File Input widget  |
 | Footer styling issues | Fix footer to bottom of pages |
-
+| Issue with running of Unit Tests | |
 ## Future Considerations
 
 | **Feature** | 
 | ------- | 
-| Fix Recipe Udate view | 
-| Make Recipe form more dynamic by allowing user choose how many instruction and ingredient fields |
-
 
 ##### Back to [top](#table-of-contents)
 
@@ -1412,7 +1550,7 @@ The website was tested on the following devices:
 5. Change the current working directory to the one where you want the cloned directory
 6. Type git clone and paste the URL from the clipboard 
   ```
-  $ git clone https://github.com/aleksandracodes/CI_PP4_Workout_Planner
+  $ git clone https://github.com/johnConstant/CI-PP5-burger-bar
   ```
 7. Press Enter to create your local clone
 

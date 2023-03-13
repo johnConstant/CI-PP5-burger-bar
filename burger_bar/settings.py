@@ -21,7 +21,6 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = ["ci-pp5-burger-bar.herokuapp.com", "localhost"]
 
-
 # Application definition
 
 INSTALLED_APPS = [

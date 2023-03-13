@@ -1,4 +1,6 @@
 from django.test import TestCase
+from django.http import HttpRequest
+from .forms import OrderForm, CommentForm
 
 
 class TestCheckoutViews(TestCase):
