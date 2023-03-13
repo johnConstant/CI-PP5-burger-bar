@@ -52,7 +52,13 @@ The e-commerce business model for Burger Bar, a fast-food restaurant that offers
 
 2. Marketing: The success of Burger Bar's e-commerce business model will largely depend on effective marketing strategies. The following are some marketing strategies that can be used:
 
-  - Social Media: Burger Bar can use social media platforms such as Facebook, Twitter, and Instagram to promote their online ordering and delivery services. They can use these platforms to share mouth-watering pictures of their burgers and other menu items, promote special deals and discounts, and engage with their customers.
+  - Social Media: Burger Bar can use social media platforms such as Facebook, Twitter, and Instagram to promote their online ordering and delivery services. They can use these platforms to share mouth-watering pictures of their burgers and other menu items, promote special deals and discounts, and engage with their customers. Find us on [Facebook](https://www.facebook.com/profile.php?id=100090201156118).
+
+<details><summary>See feature images</summary>
+
+![Facebook Page](docs/validation/marketing_page.png)
+![Facebook Post](docs/validation/fmarketing_post.png)
+</details>
 
   - Email Marketing: Burger Bar can also use email marketing to reach out to their customers and promote their online ordering and delivery services. They can use email to send out newsletters, updates, and special offers to their subscribers.
 
@@ -472,7 +478,7 @@ The following models were created to represent the database model structure for 
 
 ![Navbar and feature recipes section](docs/validation/feature_nav_desktop_loggedIn.png)
 ![Intro section](docs/validation/feature_homepage_header.png)
-![Email subscription form](docs/validation/feature_footer.png.png)
+![Email subscription form](docs/validation/feature_footer.png)
 ![Footer](docs/validation/feature_footer_socialMediaHover.png)
 </details>
 
@@ -680,7 +686,8 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Error page](docs/validation/)
+![Error page](docs/validation/feature_checkout.png)
+![Error page](docs/validation/feature_checkout_paymentError.png)
 </details>
 
 
@@ -1013,6 +1020,14 @@ The Lighthouse evaluation tool was used to test the website's performance.
 <img src="docs/validation/lighthouse_validation_cart.png"> 
 </details>
 
+<details><summary>Checkout</summary>
+<img src="docs/validation/lighthouse_validation_checkout.png">
+</details>
+
+<details><summary>Checkout Success</summary>
+<img src="docs/validation/lighthouse_validation_checkout_success.png">
+</details>
+
 <details><summary>Contact</summary>
 <img src="docs/validation/lighthouse_validation_contact.png">
 </details>
@@ -1029,9 +1044,6 @@ The Lighthouse evaluation tool was used to test the website's performance.
 <img src="docs/validation/lighthouse_validation_logout.png">
 </details>
 
-<details><summary>Error Pages (400, 403, 404, 500)</summary>
-<img src="docs/validation/lighthouse_validation_error.html.JPG"> 
-</details>
 
 ##### Back to [top](#table-of-contents)
 
@@ -1064,7 +1076,7 @@ Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | scroll to footer where so
 
 <details><summary>Screenshot</summary>
 <img src="docs/validation/feature_footer_socialMediaHover.png">
-<img src="docs/validation/feature_nav_desktop_loggedOut">
+<img src="docs/validation/feature_nav_desktop_loggedOut.png">
 </details>
 
 3. As a site user, I want to be able to connect by email to stay up-to-date with new offers.
@@ -1086,7 +1098,7 @@ Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | Scroll to footer and fill
 Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | Customer sees important company information and offers | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/validation/">
+<img src="docs/validation/feature_homepage_header.png">
 </details>
 
 
@@ -1146,15 +1158,15 @@ Navigate to https://ci-pp4-recipe-site.herokuapp.com/accounts/login/ and click l
 
 9. As a site user, I want to be able to place an order for collection or delivery.
 
-<!-- **Step** | **Expected Result** | **Actual Result**
+**Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com//categories/ | Category page loads | Works as expected |
-Click on category panel tile for category detail page | Category detail page loads with related recipes displayed at the bottom of the page | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/checkout/ with items in shopping cart | Checkout page loads | Works as expected |
+Clhoose order type to specifiy collection or delivery | Confirmation message and specify whether order is for collection or delivery | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-8a.png">
-<img src="docs/testing/test-user-story-8b.png">
-</details> -->
+<img src="docs/validation/feature_checkout_email.png">
+<img src="docs/validation/feature_checkout_orderType.png">
+</details>
 
 10. As a site user, I want to be able to choose the amount of an item I want to add to my order.
 
@@ -1206,45 +1218,22 @@ Navigate to https://ci-pp5-burger-bar.herokuapp.com/cart/ and use the controls t
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-<!-- Navigate to https://ci-pp4-recipe-site.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on Recipe add + button | Recipe add form is presented to user in backend | Works as expected |
-Fill out form with relevant details and click save | New recipe is added to database | Works as expected |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/recipes logged in as superuser | Add recipe button is displayed above recipe list | Works as expected |
-Click on Recipe add + button | Recipe add form is presented to user in frontend | Works as expected |
-Fill out form with relevant details and click save | New recipe is added to database | Works as expected |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on Article add + button | Article add form is presented to user in backend | Works as expected |
-Fill out form with relevant details and click save | New article is added to database | Works as expected |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/articles logged in as superuser | Add article button is displayed above article list | Works as expected |
-Click on Article add + button | Article add form is presented to user in frontend | Works as expected |
-Fill out form with relevant details and click save | New article is added to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/checkout/ | Payment form is processed using Stripe with its built in security features | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-14a.png">
-<img src="docs/testing/test-user-story-14b.png">
-<img src="docs/testing/test-user-story-14c.png">
-<img src="docs/testing/test-user-story-14d.png">
-<img src="docs/testing/test-user-story-14e.png">
-<img src="docs/testing/test-user-story-14f.png">
-<img src="docs/testing/test-user-story-14g.png">
-<img src="docs/testing/test-user-story-14h.png">
-<img src="docs/testing/test-user-story-14i.png">
-<img src="docs/testing/test-user-story-14j.png">
-<img src="docs/testing/test-user-story-14k.png">
-</details> -->
+<img src="docs/validation/feature_checkout.png">
+<img src="docs/validation/feature_checkout_paymentError.png">
+</details>
 
 15. As a site user, I want my profile details prepopulated in checkout form when signed into the website
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-<!-- Navigate to https://ci-pp4-recipe-site.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on Comments table | A list of all comments is displayed | Works as expected |
-Select the commetns for approval from list and approve | Approved comments are displayed on the front end of the website | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/checkout/ logged in as user with profile information saved | Checkout form loads with profile information pre-populated | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-15a.png">
-<img src="docs/testing/test-user-story-15b.png">
-</details> -->
+<img src="docs/validation/feature_checkout.png">
+</details>
 
 16. As a site user, I want to be able to view my previous orders.
 
@@ -1416,6 +1405,7 @@ Navigate to https://ci-pp5-burger-bar.herokuapp.com/faqs/ logged in as superuser
 27. As a site administrator, I want to view the users registered to the website.
 
 **Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/auth/user/ | List of registered customers is presented to the user | Works as expected |
 
 <details><summary>Screenshot</summary>
@@ -1425,6 +1415,7 @@ Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/auth/user/ | List of r
 28. As a site administrator, I want to be able to view comments and messages left by users on the Contact Us form
 
 **Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/auth/user/ | List of registered customers is presented to the user | Works as expected |
 
 <details><summary>Screenshot</summary>
@@ -1496,7 +1487,7 @@ Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | scroll to footer where so
 
 <details><summary>Screenshot</summary>
 <img src="docs/validation/feature_footer_socialMediaHover.png">
-<img src="docs/validation/feature_nav_desktop_loggedOut">
+<img src="docs/validation/feature_nav_desktop_loggedOut.png">
 </details>
 
 33. As a store owner, I want to increase the number of people I can email about new products and special offers to increase foot traffic in the restaurants.
@@ -1513,11 +1504,6 @@ Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | Scroll to footer and fill
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-<!-- Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | Scroll to footer and fill out email subscription form | Works as expected |
-
-<details><summary>Screenshot</summary>
-<img src="docs/validation/feature_footer.png">
-</details> -->
 
 35. As a store owner, I want to be able to add new locations to the site as they open increasing sales.
 
@@ -1536,11 +1522,8 @@ Navigate to https://ci-pp5-burger-bar.herokuapp.com/locations/ logged in as supe
 
 <details><summary>Screenshot</summary>
 <img src="docs/validation/feature_location_add.png">
-<img src="docs/validation/feature_location_backEnd_add.png">
 <img src="docs/validation/feature_location_edit.png">
-<img src="docs/validation/feature_location_backEnd_edit.png">
 <img src="docs/validation/feature_location_delete.png">
-<img src="docs/validation/feature_location_backEnd_delete.png">
 </details>
 
 36. As a store owner, I want to be able to add new menu items to the menu increasing sales.
@@ -1609,21 +1592,24 @@ Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/auth/user/ | List of r
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-<!-- Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | Scroll to footer and fill out email subscription form | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/checkout/ with items in shopping cart | Checkout page loads | Works as expected |
+Close site down during payment processing | Order information is handled by Webhook passing information to Stripe and back to the site. | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/validation/feature_footer.png">
-</details> -->
+<img src="docs/validation/feature_checkout.png">
+<img src="docs/validation/feature_checkout_email.png">
+<img src="docs/validation/feature_checkout_orderType.png">
+</details>
 
 40. As a store owner, I want to make the checkout process as easy as possible for customers to increase the number of orders.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-<!-- Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | Scroll to footer and fill out email subscription form | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/checkout/ logged in as user with profile information saved | Checkout form loads with profile information pre-populated | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/validation/feature_footer.png">
-</details> -->
+<img src="docs/validation/feature_checkout.png">
+</details>
 
 41. As a store owner, I want customers to create accounts so I can store information on customers for marketing purposes.
 
