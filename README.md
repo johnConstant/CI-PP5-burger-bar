@@ -1,6 +1,8 @@
 **Developer: John Constant**
 
-💻 [Visit live website](https://ci-pp4-recipe-site.herokuapp.com/)
+![Mockup image](docs/validation/am_I_responsive.png)
+
+💻 [Visit live website](https://ci-pp5-burger-bar.herokuapp.com/)
 
 ## Table of Contents
   - [About](#about)
@@ -9,7 +11,6 @@
   - [User Experience](#user-experience)
   - [User Stories](#user-stories)
   - [Design](#design)
-    - [Colours](#colours)
     - [Fonts](#fonts)
     - [Structure](#structure)
       - [Website pages](#website-pages)
@@ -32,10 +33,6 @@
   - [Acknowledgements](#acknowledgements)
 
 ### Credentials
-Superuser login details:
-user1
-user1@recipesite.com
-EyHZiF6B8MWFFb4
 
 ### About
 
@@ -311,10 +308,11 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Logo and navbar](docs/features/nav-desktop-logged-out-v2.png)
-![Logo and navbar](docs/features/nav-desktop-logged-in.png)
-![Logo and navbar](docs/features/nav-mobile-collapsed.png)
-![Logo and navbar](docs/features/nav-mobile-open.png)
+![Logo and navbar](docs/validation/feature_nav_desktop_loggedIn.png)
+![Logo and navbar](docs/validation/feature_nav_desktop_loggedOut.png)
+![Logo and navbar](docs/validation/feature_nav_mobile_loggedOut.png)
+![Logo and navbar](docs/validation/feature_navExpanded_mobile_loggedOut.png)
+![Logo and navbar](docs/validation/feature_navExpanded_mobile_loggedIn.png)
 </details>
 
 
@@ -325,13 +323,10 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Navbar and feature recipes section](docs/features/home-nav-featured-recipes.png)
-![Intro section](docs/features/home-intro-section.png)
-![Most popular recipes section](docs/features/home-most-popular-recipes-section.png)
-![Most recent categories section](docs/features/home-categories-section.png)
-![Most recent articles section](docs/features/home-articles-section.png)
-![Email subscription form](docs/features/home-signup-form.png)
-![Footer](docs/features/home-footer.png)
+![Navbar and feature recipes section](docs/validation/feature_nav_desktop_loggedIn.png)
+![Intro section](docs/validation/feature_homepage_header.png)
+![Email subscription form](docs/validation/feature_footer.png.png)
+![Footer](docs/validation/feature_footer_socialMediaHover.png)
 </details>
 
 
@@ -343,7 +338,9 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Footer](docs/features/home-footer.png)
+![Footer](docs/validation/feature_footer.png)
+![Footer](docs/validation/feature_footer_mobile.png)
+![Footer](docs/validation/feature_footer_socialMediaHover.png)
 </details>
 
 
@@ -357,8 +354,10 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Log in](docs/features/login-email.png)
-![Social sign on](docs/features/login-google.png)
+![Sign Up](docs/validation/feature_register.png)
+![Sign Up Notification](docs/validation/feature_signIn_notification.png)
+![Social sign on](docs/validation/feature_socialSignIn.png)
+
 </details>
 
 
@@ -372,8 +371,10 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Log in](docs/features/login-email.png)
-![Social sign on](docs/features/login-google.png)
+![Log in](docs/validation/feature_signIn.png)
+![Log in](docs/validation/feature_signIn_notification.png)
+![Social sign on](docs/validation/feature_socialSignIn.png)
+
 </details>
 
 
@@ -383,7 +384,7 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Logout](docs/features/sign-out.png)
+![Logout](docs/validation/feature_signOut.png)
 </details>
 
 
@@ -396,7 +397,8 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Error page](docs/features/error-500-page.png)
+![Profile page](docs/validation/feature_profile.png)
+![Previous Order](docs/validation/feature_orderHistory.png)
 </details>
 
 
@@ -409,7 +411,10 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Error page](docs/features/error-500-page.png)
+![Profile Page](docs/validation/feature_previousOrder.png)
+![Previous Order](docs/validation/feature_orderHistory.png)
+![Previous Order Summary](docs/validation/feature_previousOrder_summary.png)
+![Previous Order Comments](docs/validation/feature_previousOrder_comments.png)
 </details>
 
 
@@ -419,7 +424,7 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Logout](docs/features/sign-out.png)
+![About Us](docs/validation/feature_aboutUs_content.png)
 </details>
 
 
@@ -432,21 +437,32 @@ The following models were created to represent the database model structure for 
 - User stories covered: 3, 10, 12
 <details><summary>See feature images</summary>
 
-![Categories](docs/features/categories-logged-in.png)
-![Categories](docs/features/categories-logged-out.png)
+![Menu List](docs/validation/feature_menu_list.png)
+![Menu Mobile List](docs/validation/feature_menu_mobile_list.png)
+![Menu Category Description](docs/validation/feature_menu_categoryDescription.png)
+![Menu Controls](docs/validation/feature_menu_search_sorting.png)
+![Menu Search Results](docs/validation/feature_menu_searchResults.png)
+![Menu Sorting Options](docs/validation/feature_menu_search_sortingMenu.png)
+![Menu Pagination](docs/validation/feature_menu_pagination.png)
 </details>
 
 
 ### Menu Item detail page
 - This page contains the featured image, name, description, price and allergen information where applicable.
+- Quantity buttons are restricted to values between 1 and 99. They will appear greyed out otherwise.
+- Checkout button appears on page if cart is not empty.
 - There are two views depending whether a user is logged in or not
   - Users who are logged in as admins can see the option to edit or delete a menu item. 
   - Logged-in users and unauthenticated users will not have the ability to edit or delete menu items and therefore won't see this section of the page.
 - User stories covered: 3, 10, 12
 <details><summary>See feature images</summary>
 
-![Categories](docs/features/categories-featured-image.png)
-![Categories](docs/features/categories-related-recipes.png)
+![Categories](docs/validation/feature_menuDetail_emptyCart_desktop.png)
+![Categories](docs/validation/feature_menuDetail_increasedQty_desktop.png)
+![Menu Detail mobile](docs/validation/feature_menuDetail_mobile.png)
+![Checkout Notification](docs/validation/feature_menuDetail_notification_cart.png)
+![No checkout button](docs/validation/feature_checkoutcontrols_noCheckout.png)
+![Checkout button](docs/validation/feature_checkoutControls_checkout.png)
 </details>
 
 
@@ -461,8 +477,7 @@ The following models were created to represent the database model structure for 
   
 <details><summary>See feature images</summary>
 
-![Add category](docs/features/categories-add-category.png)
-![Add category mobile](docs/features/categories-add-category-mobile.png)
+![Add menu item](docs/validation/feature_menuItem_add.png)
 </details>
 
 ### Edit Menu Item page
@@ -474,8 +489,7 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![View plans](docs/features/categories-edit-category.png)
-![View plans](docs/features/categories-edit-category-mobile.png)
+![Edit menu item](docs/validation/feature_menuItem_edit.png)
 </details>
 
 
@@ -487,8 +501,7 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Delete Category](docs/features/categories-delete-category.png)
-![Delete Category](docs/features/categories-delete-modal.png)
+![Delete menu item](docs/validation/feature_menuItem_delete.png)
 </details>
 
 
@@ -501,7 +514,10 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Error page](docs/features/error-500-page.png)
+![Shopping cart](docs/validation/feature_shoppingCart_summary.png)
+![Free Delivery](docs/validation/feature_shoppingCart_freeDelivery.png)
+![Shopping cart controls](docs/validation/feature_cart_qtyControls.png)
+![Shopping cart notification](docs/validation/feature_shoppingCart_notification.png)
 </details>
 
 
@@ -516,7 +532,7 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Error page](docs/features/error-500-page.png)
+![Error page](docs/validation/)
 </details>
 
 
@@ -528,7 +544,7 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Error page](docs/features/error-500-page.png)
+![Checkout success](docs/validation/feature_checkoutSuccess.png)
 </details>
 
 
@@ -540,8 +556,7 @@ The following models were created to represent the database model structure for 
 - User stories covered: 3, 10, 12
 <details><summary>See feature images</summary>
 
-![Categories](docs/features/categories-logged-in.png)
-![Categories](docs/features/categories-logged-out.png)
+![Locations](docs/validation/feature_locations.png)
 </details>
 
 
@@ -553,8 +568,8 @@ The following models were created to represent the database model structure for 
 - User stories covered: 3, 10, 12
 <details><summary>See feature images</summary>
 
-![Categories](docs/features/categories-featured-image.png)
-![Categories](docs/features/categories-related-recipes.png)
+![Location detail](docs/validation/feature_locationDetails.png)
+![Map](docs/validation/feature_locationDetail_map.png)
 </details>
 
 
@@ -568,8 +583,7 @@ The following models were created to represent the database model structure for 
   
 <details><summary>See feature images</summary>
 
-![Add category](docs/features/categories-add-category.png)
-![Add category mobile](docs/features/categories-add-category-mobile.png)
+![Add location](docs/validation/feature_location_add.png)
 </details>
 
 ### Edit Location page
@@ -581,8 +595,7 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![View plans](docs/features/categories-edit-category.png)
-![View plans](docs/features/categories-edit-category-mobile.png)
+![Add location](docs/validation/feature_location_edit.png)
 </details>
 
 
@@ -594,8 +607,7 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Delete Category](docs/features/categories-delete-category.png)
-![Delete Category](docs/features/categories-delete-modal.png)
+![Add location](docs/validation/feature_location_delete.png)
 </details>
 
 
@@ -607,8 +619,7 @@ The following models were created to represent the database model structure for 
 - User stories covered: 3, 10, 12
 <details><summary>See feature images</summary>
 
-![Categories](docs/features/categories-logged-in.png)
-![Categories](docs/features/categories-logged-out.png)
+![FAQs](docs/validation/feature_FAQs.png)
 </details>
 
 ### Add FAQ page
@@ -621,8 +632,7 @@ The following models were created to represent the database model structure for 
   
 <details><summary>See feature images</summary>
 
-![Add category](docs/features/categories-add-category.png)
-![Add category mobile](docs/features/categories-add-category-mobile.png)
+![Add FAQ](docs/validation/feature_faq_add.png)
 </details>
 
 ### Edit FAQ page
@@ -634,8 +644,7 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![View plans](docs/features/categories-edit-category.png)
-![View plans](docs/features/categories-edit-category-mobile.png)
+![Edit FAQ](docs/validation/feature_faq_edit.png)
 </details>
 
 
@@ -647,8 +656,8 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Delete Category](docs/features/categories-delete-category.png)
-![Delete Category](docs/features/categories-delete-modal.png)
+![Delete FAQ](docs/validation/feature_faq_delete.png)
+
 </details>
 
 
@@ -658,7 +667,9 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Feedback messages](docs/features/feedback-message.png)
+![Feedback messages](docs/validation/feature_shoppingCart_notification.png)
+![Feedback messages](docs/validation/feature_menuDetail_notification_cart.png)
+![Feedback messages](docs/validation/feature_signIn_notification.png)
 
 </details>
 
@@ -671,8 +682,7 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Contact form](docs/features/contact-desktop.png)
-![Contact form](docs/features/contact-mobile.png)
+![Contact form](docs/validation/feature_contactUs.png)
 </details>
 
 
@@ -682,7 +692,8 @@ The following models were created to represent the database model structure for 
 
 <details><summary>See feature images</summary>
 
-![Error page](docs/features/error-500-page.png)
+![Error page](docs/validation/feature_error_404.png)
+![Error page](docs/validation/feature_error_500.png)
 </details>
 
 ##### Back to [top](#table-of-contents)
