@@ -21,3 +21,4 @@ urlpatterns = [
 handler400 = 'burger_bar.views.handler400'
 handler403 = 'burger_bar.views.handler403'
 handler404 = 'burger_bar.views.handler404'
+handler500 = 'burger_bar.views.handler500'
