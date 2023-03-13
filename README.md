@@ -751,11 +751,11 @@ The W3C Markup Validation Service was used to validate the HTML of the website.
 </details>
 
 <details><summary>Login</summary>
-<img src="docs/validation/HTML_validation_login.png">
+<img src="docs/validation/HTML_validation_signin">
 </details>
 
 <details><summary>Signup</summary>
-<img src="docs/validation/HTML_validation_signup.png">
+<img src="docs/validation/HTML_validation_register.png">
 </details>
 
 <details><summary>Logout</summary>
@@ -914,124 +914,105 @@ The testing approach is as follows:
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/ | Home page main body loads with application description | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | Home page main body loads with application description | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-1.png">
+<img src="docs/validation/feature_homepage_header.png">
 </details>
 
 
-2. As a site user, I can create an account to interact with recipes
+2. As a site user, I want to be able to connect with social media to stay up-to-date with new offers.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/accounts/signup/ and fill submit form | account is created for the user with the submitted details | Works as expected |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/accounts/signup/ and click sign up with Google button | account is created for the user with details from Google account | Works as expected |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/accounts/signup/ and click sign up with Facebook button | account is created for the user with details from Facebook account | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | social media links displayed in top nav when logged out | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | scroll to footer where social media links are always diplayed | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-2a.png">
-<img src="docs/testing/test-user-story-2b.png">
-<img src="docs/testing/test-user-story-2c.png">
-<img src="docs/testing/test-user-story-2d.png">
-<img src="docs/testing/test-user-story-2e.png">
+<img src="docs/validation/feature_footer_socialMediaHover.png">
+<img src="docs/validation/feature_nav_desktop_loggedOut">
 </details>
 
-3. As a site user, I can view all recipes in one place
+3. As a site user, I want to be able to connect by email to stay up-to-date with new offers.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com//recipes/ | Recipes page main body loads with all recipes displayed | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | Scroll to footer and fill out email subscription form | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-3.png">
+<img src="docs/validation/feature_footer.png">
 
 </details>
 
 
-4. As a site user, I can view the most popular recipes on the home page
+4. As a site user, I want to see the most important company information on initially arriving at the website.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com// and scroll to most popular recipes section | Recipes with likes appear in three panels on homepage | Works as expected |
-Click on most popular panel | Brought to recipe detail page for more information on recipe | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/ | Customer sees important company information and offers | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-4.png">
+<img src="docs/validation/">
 </details>
 
 
-5. As a site user, I can view the featured recipes on the home page
+5. As a site user, I want to be able to find out more about the company to help make an informed decision about who I purchase from.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com// | 5 featured recipes appearing on homepage carousel | Works as expected |
-Click on most carousel slide | Brought to recipe detail page for more information on recipe | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/about/ | Customer can find out more in-depth information about the comapny and our values | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-5a.png">
-<img src="docs/testing/test-user-story-5b.png">
+<img src="docs/validation/feature_aboutUs_content.png">
 </details>
 
 
-6. As a site user, I can log in to comment on recipes and articles
+6. As a site user, I want to be able to view the restaurant’s menu to see what items are on offer.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/accounts/login/ and fill submit form | account is created for the user with the submitted details | Works as expected |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/accounts/login/ and click log in with Google button | account is created for the user with details from Google account | Works as expected |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/accounts/login/ and click log in with Github button | account is created for the user with details from Github account | Works as expected |
-Once logged in go to recipe page, scroll to comments section and leave a comment | Comment is submitted for approval | Works as expected
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/ and click on the Order Now button in the homepage header | Customer is brought to the Menu page to view all menu items | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/menu/ | Customer is brought to the Menu page to view all menu items | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/menu/?category=Special%20Offers | Customer is brought to the Special Offer category on the Menu page to view all menu items on offer | Works as expected |
+
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-2a.png">
-<img src="docs/testing/test-user-story-2b.png">
-<img src="docs/testing/test-user-story-2c.png">
-<img src="docs/testing/test-user-story-2d.png">
-<img src="docs/testing/test-user-story-2e.png">
-<img src="docs/testing/test-user-story-6a.png">
+<img src="docs/validation/feature_homepage_header.png">
+<img src="docs/validation/feature_menu_list.png">
+<img src="docs/validation/feature_menu_dropdownExpanded.png">
 </details>
 
 
 
-7. As a site user, I can log in to like/unlike recipes
+7. As a site user, I want to be able to sort menu products by price, category and alphabetically to easily find what I’m looking for.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/accounts/login/ and fill submit form | account is created for the user with the submitted details | Works as expected |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/accounts/login/ and click log in with Google button | account is created for the user with details from Google account | Works as expected |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/accounts/login/ and click log in with Facebook button | account is created for the user with details from Facebook account | Works as expected |
-Once logged in go to recipe page, scroll to info section and click heart icon | Icon changes to solid heart and number of likes count increases by one | Works as expected
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/menu/ and use sorting menu on right-hand side of page | Menu page results are organised according to option selected from menu | Works as expected |
+Navigate to any page of the website, expand the menu dropdown from the navigation and choose your desired category | Menu items from chosen category are displayed to customer | Works as expected |
+
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-2a.png">
-<img src="docs/testing/test-user-story-2b.png">
-<img src="docs/testing/test-user-story-2c.png">
-<img src="docs/testing/test-user-story-2d.png">
-<img src="docs/testing/test-user-story-2e.png">
-<img src="docs/testing/test-user-story-7a.png">
-<img src="docs/testing/test-user-story-7b.png">
+<img src="docs/validation/feature_menu_search_sorting.png">
+<img src="docs/validation/feature_menu_search_sortingMenu.png">
+<img src="docs/validation/feature_menu_categoryDescription.png">
 </details>
 
 
-8. As a site user, I can log in using social media accounts/gmail to make registration easier
+8. As a site user, I want to be able to search the menu for items I want.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/accounts/login/ and click log in with Google button | account is created for the user with details from Google account | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/menu/ and fill in the search form and submit it | Relevant results are displayed to the customer with a count of the results displayed | Works as expected |
 Navigate to https://ci-pp4-recipe-site.herokuapp.com/accounts/login/ and click log in with Facebook button | account is created for the user with details from Facebook account | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-2a.png">
-<img src="docs/testing/test-user-story-2b.png">
-<img src="docs/testing/test-user-story-2c.png">
-<img src="docs/testing/test-user-story-2d.png">
-<img src="docs/testing/test-user-story-2e.png">
+<img src="docs/validation/feature_menu_searchResults.png">
 </details>
 
-9. As a site user, I can view recipes organised by category to make finding particular recipes
+9. As a site user, I want to be able to place an order for collection or delivery.
 
-**Step** | **Expected Result** | **Actual Result**
+<!-- **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 Navigate to https://ci-pp4-recipe-site.herokuapp.com//categories/ | Category page loads | Works as expected |
 Click on category panel tile for category detail page | Category detail page loads with related recipes displayed at the bottom of the page | Works as expected |
@@ -1039,69 +1020,59 @@ Click on category panel tile for category detail page | Category detail page loa
 <details><summary>Screenshot</summary>
 <img src="docs/testing/test-user-story-8a.png">
 <img src="docs/testing/test-user-story-8b.png">
-</details>
+</details> -->
 
-10. As a site user, I can view and leave comments on an individual recipe or article
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com//recipes/ | Recipe page loads | Works as expected |
-Click on recipe card for more information | Recipe detail page loads with comments section at the bottom of the page | Works as expected |
-Logged in users can fill out the comment form and click submit button | Comment is submitted for approval | Works as expected |
-Admin user approves comment in admin dashboard | Approved comments are displayed on the recipes page | Works as expected |
-
-<details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-2a.png">
-<img src="docs/testing/test-user-story-2b.png">
-<img src="docs/testing/test-user-story-2c.png">
-<img src="docs/testing/test-user-story-2d.png">
-<img src="docs/testing/test-user-story-2e.png">
-<img src="docs/testing/test-user-story-6a.png">
-</details>
-
-11. As a site user, I want to be aware of logged in status
+10. As a site user, I want to be able to choose the amount of an item I want to add to my order.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to any page and check nav bar | Logged in users see welcome message with personalised username and sign out link | Works as expected |
-Navigate to any page and check nav bar | Unauthenticated users see welcome message with register and sign in links | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/menu/ and choose an item. On the item detail page use the quantity controls to select the number of the item you would like | Selected quantity is added to your shopping cart | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/cart/ and use the controls to adjust the number of an item in your cart | Quantity of item in shopping cart is adjusted | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-10a.png">
-<img src="docs/testing/test-user-story-10b.png">
-<img src="docs/testing/test-user-story-10c.png">
+<img src="docs/validation/feature_menuDetail_increasedQty_desktop.png">
+<img src="docs/validation/feature_cart_qtyControls.png">
 </details>
 
-12. As a site user, I want contact form/email subscription prefilled with account info
+11. As a site user I want to be able to see which items are suitable for me based on my food allergies.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/contact | Logged in users see username field of form prepopulated | Works as expected |
+Navigate to the detail page of a menu item. | Allergen information will be displayed on relevant items under item image | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-12.png">
-
+<img src="docs/validation/feature_allergenInfo.png">
+<img src="docs/validation/feature_allergenInfo_title.png">
 </details>
 
-13. As a site user, I want to be able to search through the recipes, categories and articles
+12. As a site user, I want to be able to review my order before checking out to ensure it is correct.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Click on search bar in navbar and enter search term | Search results are displayed on resulting page | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/cart/ | Customer will see a summary of the items and cost of their current order | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/checkout/ | Customer will see a summary of the items and cost of their current order on the right-hand side of the page | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-13a.png">
-<img src="docs/testing/test-user-story-13b.png">
-<img src="docs/testing/test-user-story-13c.png">
-<img src="docs/testing/test-user-story-13d.png">
+<img src="docs/validation/feature_shoppingCart_summary.png">
+<img src="docs/validation/feature_checkout.png">
+</details>
+
+13. As a site user, I want to be able to update my order before checking out.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/cart/ and use the controls to adjust the number of an item in your cart | Quantity of item in shopping cart is adjusted | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_cart_qtyControls.png">
 </details>
 
 ### Site admin
-14. As a site admin, I can create, read, update and delete my recipes and articles to manage site content
+14. As a site user, I want to check out through a secure checkout form.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
+<!-- Navigate to https://ci-pp4-recipe-site.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
 Click on Recipe add + button | Recipe add form is presented to user in backend | Works as expected |
 Fill out form with relevant details and click save | New recipe is added to database | Works as expected |
 Navigate to https://ci-pp4-recipe-site.herokuapp.com/recipes logged in as superuser | Add recipe button is displayed above recipe list | Works as expected |
@@ -1126,116 +1097,259 @@ Fill out form with relevant details and click save | New article is added to dat
 <img src="docs/testing/test-user-story-14i.png">
 <img src="docs/testing/test-user-story-14j.png">
 <img src="docs/testing/test-user-story-14k.png">
-</details>
+</details> -->
 
-15. As a site admin, I can approve or disapprove comments so that I can filter out objectionable comments
+15. As a site user, I want my profile details prepopulated in checkout form when signed into the website
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
+<!-- Navigate to https://ci-pp4-recipe-site.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
 Click on Comments table | A list of all comments is displayed | Works as expected |
 Select the commetns for approval from list and approve | Approved comments are displayed on the front end of the website | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="docs/testing/test-user-story-15a.png">
 <img src="docs/testing/test-user-story-15b.png">
+</details> -->
 
-</details>
-
-16. As a site admin, I can create, read, update and delete categories to organise site content
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on Category add + button | Category add form is presented to user in backend | Works as expected |
-Fill out form with relevant details and click save | New category is added to database | Works as expected |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/categories logged in as superuser | Add category button is displayed above category list | Works as expected |
-Click on Category add + button | Category add form is presented to user in frontend | Works as expected |
-Fill out form with relevant details and click save | New category is added to database | Works as expected |
-
-<details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-16a.png">
-<img src="docs/testing/test-user-story-16b.png">
-<img src="docs/testing/test-user-story-16c.png">
-<img src="docs/testing/test-user-story-16d.png">
-</details>
-
-17. As a site admin, I can choose which recipes are featured on the home page
-
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Choose your recipe from the Recipes table | Recipe edit form is presented to user in backend | Works as expected |
-Select the featured recipe checkbox and click save | New recipe is appearing on the home page carousel | Works as expected |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/recipes logged in as superuser | Add recipe button is displayed above recipe list | Works as expected |
-Choose your recipe from the Recipes table | Recipe edit form is presented to user in frontend | Works as expected |
-Select the featured recipe checkbox and click save | New recipe is appearing on the home page carousel | Works as expected |
-
-
-<details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-16e.png">
-<img src="docs/testing/test-user-story-16f.png">
-
-</details>
-
-18. As a site admin, I want to be able to log into admin dashboard to edit recipes/categories/comments
-
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/admin | Admin sign in form is displayed | Works as expected |
-Once logged in Recipes, Categories and articles tables are available | App tables are displayed | Works as expected |
-
-<details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-17a.png">
-<img src="docs/testing/test-user-story-17b.png">
-<img src="docs/testing/test-user-story-17c.png">
-
-</details>
-
-19. As a site admin, I want edit forms prefilled with relevant info
+16. As a site user, I want to be able to view my previous orders.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Choose a recipe from the Recipes table | Recipe edit form is presented with data prefilled | Works as expected |
-
-Navigate to https://ci-pp4-recipe-site.herokuapp.com/recipes logged in as superuser | Choose recipe from list | Works as expected |
-If logged in user is recipe author edit and delete buttons are available | Edit and Delete buttons are available to recipe author on recipe detail page | Works as expected |
-Click on edit button | Recipe edit form is presented with data prefilled | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/profile/ logged in as user with previous orders | Previous orders are displayed on the right hand side of the page | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/profile/ and click on order number of order on the right-hand side of the page | Previous order information is displayed on resulting page | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-18a.png">
-<img src="docs/testing/test-user-story-18b.png">
+<img src="docs/validation/feature_profile.png">
+<img src="docs/validation/feature_orderHistory.png">
+<img src="docs/validation/feature_previousOrder_summary.png">
+</details>
+
+17. As a site user, I want to be able to leave feedback about my order.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to previous order info page from profile. Leave comment using form on the right-hand side of the page | Comments are submitted to restaurant staff through website | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_previousOrder.png">
+<img src="docs/validation/feature_previousOrder_comments.png">
+</details>
+
+18. As a site user, I want to be able to view information about the various restaurant locations.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/locations/ | List of locations is displayed on web page | Works as expected |
+Choose location from list on https://ci-pp5-burger-bar.herokuapp.com/profile/ and go to page | Specific store information is displayed including contact info, address, opening hours and location | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_locations.png">
+<img src="docs/validation/feature_locationDetails.png">
+</details>
+
+19. As a site user, I want to be able to view the restaurant’s FAQs to answer some common questions I may have.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/faqs/ | List of FAQs is displayed on web page | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/faqs/ | Click on FAQ question text to expand accordion with answer displayed | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_FAQs.png">
 </details>
 
 ### Site Owner
-20. As a site owner, I want to increase my social media presence
+20. As a site user, I want to be able to contact the restaurant with any questions or comments I may have.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to the any page, scroll to bottom of page | Links bring user to social media page where they can follow restaurant | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/contact/ and fill out contact form | Form details are sent to restaurant | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-20.png">
+<img src="docs/validation/feature_contactUs.png">
 
 </details>
 
-21. As a site owner, I want data entry to be validated on sign-up page
-
-22. As a site owner, I want the user to come to a 404 error page instead of having to use the browser back button if they enter a URL that does not exist
+21. As a site user, I want to be able to create an account and save my personal information.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Type the wrong page in the www address | Reroute to a customised 404 page | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/accounts/signup/ and fill submit form | account is created for the user with the submitted details | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/profile/ and add additional information to your profile | account details are updated to include new information | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-21.png">
+<img src="docs/validation/feature_register.png">
+<img src="docs/validation/feature_profile.png">
 </details>
 
-23. As a site owner, I want user to be able to contact me and provide their feedback
+22. As a site user, I want to be able to create an account using my social media for quick setup.
 
 **Step** | **Expected Result** | **Actual Result**
-Navigate to the contact page, scroll down to contact form | Form allows user to make contact and provide feedback | Works as expected |
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/accounts/signup/ and click sign up with Google button | account is created for the user with details from Google account | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/accounts/signup/ and click sign up with Facebook button | account is created for the user with details from Facebook account | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/test-user-story-23.png">
+<img src="docs/validation/feature_register.png">
+<img src="docs/validation/feature_socialSignIn.png">
+</details>
 
+23. As a site user, I want to be able to update my account information.
+
+**Step** | **Expected Result** | **Actual Result**
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/profile/ and add additional information to your profile | account details are updated to include new information | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_register.png">
+<img src="docs/validation/feature_profile.png">
+</details>
+
+24. As a site administrator, I want to be able to add, edit and delete menu items and menu categories
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
+Click on Menu Item add + button | Menu Item add form is presented to user in backend | Works as expected |
+Fill out form with relevant details and click save | New Menu Item is added to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/menu logged in as superuser | Add Menu Item button is displayed above Menu list | Works as expected |
+Click on Menu Item add + button | Menu Item add form is presented to user in frontend | Works as expected |
+Fill out form with relevant details and click save | New Menu Item is added to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/menu/menu_item/ logged in as superuser and update menu item information | Updated menu item is saved to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/menu/ logged in as superuser choose the item to edit. Front-end form is presented to the user. Update menu item information | Updated menu item is saved to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/menu/menu_item/ logged in as superuser and choose menu item for deletion. Scroll to end of page and click delete button | Menu item is removed from the database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/menu/ logged in as superuser choose the item to delete. Modal is presented to user confirming the action | Menu item is removed from the database | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_menuItem_add.png">
+<img src="docs/validation/feature_menuItem_backEnd_add.png">
+<img src="docs/validation/feature_menuItem_edit.png">
+<img src="docs/validation/feature_menuItem_backEnd_edit.png">
+<img src="docs/validation/feature_menuItem_delete.png">
+<img src="docs/validation/feature_menuItem_backEnd_delete.png">
+</details>
+
+25. As a site administrator, I want to be able to add, edit and delete new locations when new restaurants open.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
+Click on location add + button | location add form is presented to user in backend | Works as expected |
+Fill out form with relevant details and click save | New location is added to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/locations logged in as superuser | Add location button is displayed above Locations list | Works as expected |
+Click on location add + button | location add form is presented to user in frontend | Works as expected |
+Fill out form with relevant details and click save | New location is added to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/location/location/ logged in as superuser and update location information | Updated location is saved to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/locations/ logged in as superuser choose the item to edit. Front-end form is presented to the user. Update location information | Updated location is saved to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/location/location/ logged in as superuser and choose location for deletion. Scroll to end of page and click delete button | location is removed from the database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/locations/ logged in as superuser choose the item to delete. Modal is presented to user confirming the action | location is removed from the database | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_location_add.png">
+<img src="docs/validation/feature_location_backEnd_add.png">
+<img src="docs/validation/feature_location_edit.png">
+<img src="docs/validation/feature_location_backEnd_edit.png">
+<img src="docs/validation/feature_location_delete.png">
+<img src="docs/validation/feature_location_backEnd_delete.png">
+</details>
+
+26. As a site administrator, I want to be able to add, edit and delete a new FAQ
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
+Click on FAQ add + button | FAQ add form is presented to user in backend | Works as expected |
+Fill out form with relevant details and click save | New FAQ is added to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/ logged in as superuser | Add FAQ button is displayed above Menu list | Works as expected |
+Click on FAQ add + button | FAQ add form is presented to user in frontend | Works as expected |
+Fill out form with relevant details and click save | New FAQ is added to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/faqs/faq/ logged in as superuser and update FAQ information | Updated FAQ is saved to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/faqs/ logged in as superuser choose the item to edit. Front-end form is presented to the user. Update FAQ information | Updated FAQ is saved to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/faqs/faq/ logged in as superuser and choose FAQ for deletion. Scroll to end of page and click delete button | FAQ is removed from the database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/faqs/ logged in as superuser choose the item to delete. Modal is presented to user confirming the action | FAQ is removed from the database | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_faq_add.png">
+<img src="docs/validation/feature_faq_backEnd_add.png">
+<img src="docs/validation/feature_faq_edit.png">
+<img src="docs/validation/feature_faq_backEnd_edit.png">
+<img src="docs/validation/feature_faq_delete.png">
+<img src="docs/validation/feature_faq_backEnd_delete_1.png">
+<img src="docs/validation/feature_faq_backEnd_delete_2.png">
+<img src="docs/validation/feature_faq_backEnd_delete_3.png">
+</details>
+
+27. As a site administrator, I want to view the users registered to the website.
+
+**Step** | **Expected Result** | **Actual Result**
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/auth/user/ | List of registered customers is presented to the user | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_accounts.png">
+</details>
+
+28. As a site administrator, I want to be able to view comments and messages left by users on the Contact Us form
+
+**Step** | **Expected Result** | **Actual Result**
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/auth/user/ | List of registered customers is presented to the user | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_contact_messages.png">
+<img src="docs/validation/feature_contact_message.png">
+</details>
+
+29. As a site administrator, I want to be able to to add, edit and delete new allergens
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
+Click on Allergen add + button | FAQ add form is presented to user in backend | Works as expected |
+Fill out form with relevant details and click save | New Allergen is added to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/menu/allergen/ logged in as superuser and update Allergen information | Updated Allergen is saved to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/menu/allergen/ logged in as superuser and choose Allergen for deletion. Scroll to end of page and click delete button | Allergen is removed from the database | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_allergen_backEnd_add.png">
+<img src="docs/validation/feature_allergen_backEnd_edit.png">
+<img src="docs/validation/feature_allergen_backEnd_delete_1.png">
+<img src="docs/validation/feature_allergen_backEnd_delete_2.png">
+<img src="docs/validation/feature_allergen_backEnd_delete_3.png">
+</details>
+
+30. As a site administrator, I want to be able to to add, edit and delete menu categories
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
+Click on Menu Category add + button | FAQ add form is presented to user in backend | Works as expected |
+Fill out form with relevant details and click save | New category is added to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/menu/menu_category/ logged in as superuser and update category information | Updated category is saved to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/menu/menu_category/ logged in as superuser and choose category for deletion. Scroll to end of page and click delete button | category is removed from the database | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_category_backEnd_add.png">
+<img src="docs/validation/feature_category_backEnd_edit.png">
+<img src="docs/validation/feature_category_backEnd_delete_1.png">
+<img src="docs/validation/feature_category_backEnd_delete_2.png">
+<img src="docs/validation/feature_category_backEnd_delete_3.png">
+</details>
+
+
+31. As a site administrator, I want to be able to to view and edit past orders
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
+User can filter orders using the controls on the irght-hand side of the page | Orders are filtered by date, location or type as selected | Works as expected
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/checkout/order/ logged in as superuser and update orders information | Updated orders is saved to database | Works as expected |
+Navigate to https://ci-pp5-burger-bar.herokuapp.com/admin/checkout/order/ logged in as superuser and choose orders for deletion. Scroll to end of page and click delete button | orders is removed from the database | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/feature_orders_backEnd_list.png">
+<img src="docs/validation/feature_orders_backEnd_filterControls.png">
+<img src="docs/validation/feature_orders_backEnd_edit.png">
+<img src="docs/validation/feature_orders_backEnd_edit_2.png">
+<img src="docs/validation/feature_orders_backEnd_delete.png">
 </details>
 
 ### Automated testing
