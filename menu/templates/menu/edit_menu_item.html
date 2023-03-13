@@ -11,7 +11,7 @@
             class="col-sm-8 col-md-6 offset-sm-2 offset-md-3 p-5"
         >
         <h2 class="category-title mt-5">Update Menu Item</h2>
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data" class="add-item">
             {% csrf_token %}
             {% for field in form %}
                 {% if field.name != 'image' %}

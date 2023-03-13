@@ -570,7 +570,8 @@ input::file-selector-button {
     margin-bottom: 0;
 }
 
-#payment-form .form-select {
+#payment-form .form-select,
+.add-item .form-select {
     padding: 0.5rem 1rem;
     border-bottom: 1px solid #ccc;
     margin-bottom: 0.5rem;
